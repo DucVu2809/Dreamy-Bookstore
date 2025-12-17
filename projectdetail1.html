@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Detail</title>
+
+  <!-- Font studio -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+:root {
+    --bg-color: #f5f2eb;      
+    --text-main: #1a1a1a;     
+    --text-gray: #7a7a7a;     
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    letter-spacing: 0.5px; 
+}
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ===== Layout ===== */
+    .container {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 32px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .back-link:hover {
+      transform: translateX(-4px);
+      color: #000;
+    }
+
+    /* ===== Project Main ===== */
+    .project-main {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    /* Image */
+    .project-image {
+      overflow: hidden;
+    }
+
+    .project-image img {
+      width: 100%;
+      display: block;
+      transition: transform 0.9s ease;
+    }
+
+    .project-image:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Info */
+    .project-info h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+
+    .project-info p {
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .meta span {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .meta strong {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* Buttons */
+    .actions {
+      margin-top: 40px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid #111;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn.primary {
+      background: #111;
+      color: #fff;
+    }
+
+    .btn.primary:hover {
+      background: #000;
+      transform: translateY(-2px);
+    }
+
+    .btn.outline:hover {
+      background: #111;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Description ===== */
+    .project-desc {
+      max-width: 800px;
+      margin: 120px auto;
+      padding: 0 20px;
+    }
+
+    .project-desc h2 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+    }
+
+    .project-desc p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .container {
+        margin: 40px auto;
+      }
+
+      .project-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+  
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <section class="project-main">
+      <div class="project-image">
+        <img src="anh11.png" alt="Ảnh chính">
+      </div>
+
+      <div class="project-info">
+        <h1> Thiết kế trending </h1>
+        <p>Dự án thiết kế website trending theo phong cách studio tối giản, tập trung vào hình ảnh và trải nghiệm người dùng.</p>
+
+        <div class="meta">
+          <div>
+            <span>Role</span>
+            <strong>UI / Front-end</strong>
+          </div>
+          <div>
+            <span>Year</span>
+            <strong>2025</strong>
+          </div>
+          <div>
+            <span>Nổi bật</span>
+            <strong> Thiết kế nổi bật</strong>
+          </div>
+          <div>
+            <span>Type</span>
+            <strong>Web Design</strong>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a href="#" class="btn primary">View Live</a>
+          <a href="#" class="btn outline">Case Study</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="project-desc">
+    <h2>Project Description</h2>
+  </section>
+
+</body>
+</html>
