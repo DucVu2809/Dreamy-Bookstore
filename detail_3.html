@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sách - GSLibrary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="Logo">
+      </a>
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm...">
+      <button>Tìm kiếm</button>
+    </div>
+    <div class="header-icons">
+      <a href="#">🗒️Tra cứu đơn hàng</a>
+      <a href="#">🛒Giỏ hàng (0)</a>
+      <a href="#">💳Tài khoản</a>
+    </div>
+  </header>
+  <!-- Menu -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Danh mục sách</a></li>
+      <li><a href="skills.html">Sản phẩm đã xem </a></li>
+      <li>🚚 Ship COD</li>
+      <li>🎁 Free Ship</li>
+      <li class="hotline">📞 Hotline 0969 6969 696 / 0363 6363 636</li>
+    </ul>
+  </nav>
+
+     <main class="book-detail">
+    <!-- Ảnh bìa -->
+    <div class="book-cover">
+      <img src="images/skillbook3.png" alt="skillbook3">
+    </div>
+    <!--Chi tiết sách-->
+  <div class="book-info">
+      <h2>Programming For Newbies C/C++</h2>
+      <p><strong>Tác giả:</strong> Đỗ Thị Hồng Ngát</p>
+      <p><strong>Dịch giả:</strong> </p>
+      <p><strong>NXB:</strong> Nhà xuất bản Thông tin Truyền thông</p>
+
+      <div class="price-box">
+        <span class="price-sale">98.000₫</span>
+        <span class="price-old">155.000₫</span>
+      </div>
+
+      <div class="quantity">
+  <button onclick="decrease()">-</button>
+  <input type="text" id="qty" value="1">
+  <button onclick="increase()">+</button>
+</div>
+
+<script>
+  function increase() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    input.value = value + 1;
+  }
+
+  function decrease() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    if (value > 1) {
+      input.value = value - 1;
+    }
+  }
+</script>
+
+      <div class="actions">
+        <button class="btn-cart">THÊM VÀO GIỎ</button>
+        <button class="btn-buy">MUA NGAY</button>
+      </div>
+    <div class="service-promo">
+  <h4>Dịch vụ & Khuyến mãi</h4>
+  <ul>
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon tag">🏷️</span>
+      Đối với sản phẩm giảm 40% - 50% - 70% (sản phẩm xả kho):
+      Mỗi khách hàng được mua tối đa 3 sản phẩm / 1 mặt hàng / 1 đơn hàng
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm Bookmark (đánh dấu trang) cho các sách Kĩ năng sống,
+      Kinh doanh, Mẹ và Bé, Văn học
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      FREESHIP cho đơn hàng từ 300K trở lên
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm 1 VOUCHER 20K cho đơn từ 500K trở lên
+    </li>
+  </ul>
+</div>
+</div>
+  </main>
+  <section class="book-intro">
+  <h3>Giới thiệu sách</h3>
+  <p>
+Cuốn sách tập hợp hơn 200 bài tập lập trình cơ bản, được chia thành 6 phần : Nhập - Xuất, Cấu trúc rẽ nhánh, Cấu trúc lặp, Xử lý xâu, Dữ liệu kiểu mảng, Đệ quy và các bài tập nâng cao nhằm cung cấp cho các bạn mới tìm hiểu về lập trình có một lộ trình tổng quan và môi trường học tập tốt nhất. Thông qua việc làm bài tập trực quan, các bạn mới bắt đầu học lập trình sẽ hiểu được các khái niệm lập trình cơ bản cũng như hệ thống các câu lệnh.
+  </p>
+</section>
+
+<!-- Thông tin chi tiết -->
+<section class="book-specs">
+  <h3>Thông tin chi tiết</h3>
+  <table>
+    <tr>
+      <td>Mã hàng</td>
+      <td>9786048091552</td>
+    </tr>
+    <tr>
+      <td>Tên Nhà Cung Cấp</td>
+      <td>Nhà xuất bản Thông tin Truyền thông</td>
+    </tr>
+    <tr>
+      <td>Tác giả</td>
+      <td>Đỗ Thị Hồng Ngát</td>
+    </tr>
+    <tr>
+      <td>Người dịch</td>
+    </tr>
+    <tr>
+      <td>NXB</td>
+      <td>Nhà xuất bản Thông tin Truyền thông</td>
+    </tr>
+    <tr>
+      <td>Năm XB</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td>Ngôn ngữ</td>
+      <td>Tiếng Việt</td>
+    </tr>
+    <tr>
+      <td>Trọng lượng (gr)</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <td>Kích thước bao bì</td>
+      <td>24 x 15.7 x 1.3 cm</td>
+    </tr>
+    <tr>
+      <td>Số trang</td>
+      <td>190</td>
+    </tr>
+    <tr>
+      <td>Hình thức</td>
+      <td>Bìa mềm</td>
+    </tr>
+  </table>
+</section>
+  <footer>
+    <p>© 2025 The GoldenStar</p>
+  </footer>
+</body>
+</html>
+
