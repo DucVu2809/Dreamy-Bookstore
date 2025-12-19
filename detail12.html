@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sách - GSLibrary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="Logo">
+      </a>
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm...">
+      <button>Tìm kiếm</button>
+    </div>
+    <div class="header-icons">
+      <a href="#">🗒️Tra cứu đơn hàng</a>
+      <a href="#">🛒Giỏ hàng (0)</a>
+      <a href="#">💳Tài khoản</a>
+    </div>
+  </header>
+  <!-- Menu -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Danh mục sách</a></li>
+      <li><a href="skills.html">Sản phẩm đã xem </a></li>
+      <li>🚚 Ship COD</li>
+      <li>🎁 Free Ship</li>
+      <li class="hotline">📞 Hotline 0969 6969 696 / 0363 6363 636</li>
+    </ul>
+  </nav>
+
+     <main class="book-detail">
+    <!-- Ảnh bìa -->
+    <div class="book-cover">
+      <img src="images/12.png" alt="skillbook12">
+    </div>
+    <!--Chi tiết sách-->
+  <div class="book-info">
+      <h2>Combo 2Q Tôi Thấy Hoa Vàng Trên Cỏ Xanh + Cho Tôi Xin Một Vé Đi Tuổi Thơ</h2>
+      <p><strong>Tác giả:</strong> Nguyễn Nhật Ánh</p>
+      <p><strong>Dịch giả:</strong> </p>
+      <p><strong>NXB:</strong> AZ Việt Nam</p>
+
+      <div class="price-box">
+        <span class="price-sale">354.000₫</span>
+        <span class="price-old">500.000₫</span>
+
+<div class="quantity">
+  <button onclick="decrease()">-</button>
+  <input type="text" id="qty" value="1">
+  <button onclick="increase()">+</button>
+</div>
+
+<script>
+  function increase() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    input.value = value + 1;
+  }
+
+  function decrease() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    if (value > 1) {
+      input.value = value - 1;
+    }
+  }
+</script>
+      <div class="actions">
+        <button class="btn-cart">THÊM VÀO GIỎ</button>
+        <button class="btn-buy">MUA NGAY</button>
+      </div>
+    </div>
+  <div class="service-promo">
+  <h4>Dịch vụ & Khuyến mãi</h4>
+  <ul>
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon tag">🏷️</span>
+      Đối với sản phẩm giảm 40% - 50% - 70% (sản phẩm xả kho):
+      Mỗi khách hàng được mua tối đa 3 sản phẩm / 1 mặt hàng / 1 đơn hàng
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm Bookmark (đánh dấu trang) cho các sách Kĩ năng sống,
+      Kinh doanh, Mẹ và Bé, Văn học
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      FREESHIP cho đơn hàng từ 300K trở lên
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm 1 VOUCHER 20K cho đơn từ 500K trở lên
+    </li>
+  </ul>
+</div>
+</div>
+
+  </main>
+  <section class="book-intro">
+  <h3>Giới thiệu sách</h3>
+  <p>1/ Tôi Thấy Hoa Vàng Trên Cỏ Xanh</p>
+<p>Ta phát hiện trong Tôi Thấy Hoa Vàng Trên thảm cỏ một trái đất đấy đương nhiên và thi vị trẻ trung với các suy ngẫm mộc mạc thôi nhưng thân mật đến lạ. mẩu chuyện của tớ Thấy Hoa Vàng Trên thảm cỏ có chút này chút kia, để ai soi vào cũng thấy mình trong đó, tương tự lá thư ngành ngọn đời của cu Thiều chẳng hạ ngơ ngơ và khờ khạo.</p>
+<p>Nhưng Tôi Thấy Hoa Vàng Trên thảm cỏ hình như thường còn trong trẻo, trong trắng vẹn tuyền của 1 toàn cầu tuổi thơ nữa. quyển sách nhỏ bé vẫn hồn hậu, dí dỏm, thương yêu nhưng mà thoảng nỗi buồn, về một người cha đau ốm trốn nhà vì không thích làm khổ vợ con, về một người cha khác giả làm vua bởi người con tâm thầm của ông luôn nghĩ mình là công chúa, Những bài học kinh nghiệm về luân lý, về tình người trở đi quay về trong day dứt và tiếc nuối.</p>
+<p>Tôi Thấy Hoa Vàng Trên thảm cỏ ngọt ngào và lắng đọng nhẹ nhõm trong lòng tưởng để rồi ai đó đã lỡ đọc rồi mà muốn gạt bỏ thì thật khó.</p>
+<p>2/ Cho Tôi Xin Một Vé Đi Tuổi Thơ</p>
+<p>Với Cho Tôi Xin Một Vé Đi Tuổi Thơ, nhà văn mời người theo dõi lên chuyến tàu quay ngược về thăm tuổi thơ và tình bạn xinh đẹp của 4 bạn nhỏ. Những game show đẹp tươi thời bé, cá tính thật thà, chính trực 1 cách thông thái và dại dột, những khao khát tự tại trong lòng… khiến quyển sách hoàn toàn có thể làm các bậc bố mẹ lo ngại rồi thở phào. ngoài ra phù hợp với những người đọc trẻ, quyển sách còn tồn tại thể thu hút và thực thụ tiện ích cho người trưởng thành trong mối liên hệ với con mình.</p>
+</section>
+  <!-- Thông tin chi tiết -->
+<section class="book-specs">
+  <h3>Thông tin chi tiết</h3>
+  <table>
+    <tr>
+      <td>Mã hàng</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Tên Nhà Cung Cấp</td>
+      <td>weupbook</td>
+    </tr>
+    <tr>
+      <td>Tác giả</td>
+      <td>Nguyễn Nhật Ánh</td>
+    </tr>
+    <tr>
+      <td>Người dịch</td>
+    </tr>
+    <tr>
+      <td>NXB</td>
+      <td>Nhà Xuất Bản Thanh Niên</td>
+    </tr>
+    <tr>
+      <td>Năm XB</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td>Ngôn ngữ</td>
+      <td>Tiếng Việt</td>
+    </tr>
+    <tr>
+      <td>Trọng lượng (gr)</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>Kích thước bao bì</td>
+      <td>A5</td>
+    </tr>
+    <tr>
+      <td>Số trang</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>Hình thức</td>
+      <td>Bìa mềm</td>
+    </tr>
+  </table>
+</section>
+  <footer>
+    <p>© 2025 The GoldenStar</p>
+  </footer>
+</body>
+</html>
+

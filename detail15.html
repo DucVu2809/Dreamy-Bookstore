@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sách - GSLibrary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="Logo">
+      </a>
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm...">
+      <button>Tìm kiếm</button>
+    </div>
+    <div class="header-icons">
+      <a href="#">🗒️Tra cứu đơn hàng</a>
+      <a href="#">🛒Giỏ hàng (0)</a>
+      <a href="#">💳Tài khoản</a>
+    </div>
+  </header>
+  <!-- Menu -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Danh mục sách</a></li>
+      <li><a href="skills.html">Sản phẩm đã xem </a></li>
+      <li>🚚 Ship COD</li>
+      <li>🎁 Free Ship</li>
+      <li class="hotline">📞 Hotline 0969 6969 696 / 0363 6363 636</li>
+    </ul>
+  </nav>
+
+     <main class="book-detail">
+    <!-- Ảnh bìa -->
+    <div class="book-cover">
+      <img src="images/15.png" alt="skillbook15">
+    </div>
+    <!--Chi tiết sách-->
+  <div class="book-info">
+      <h2>Đại Việt sử ký toàn thư</h2>
+      <p><strong>Tác giả:</strong> Ngô Sĩ Liên</p>
+      <p><strong>Dịch giả:</strong> Cao Huy Giu - Đào Duy Anh hiệu đính</p>
+      <p><strong>NXB:</strong> AZ Việt Nam</p>
+
+      <div class="price-box">
+        <span class="price-sale">275.000₫</span>
+        <span class="price-old">340.000₫</span>
+
+<div class="quantity">
+  <button onclick="decrease()">-</button>
+  <input type="text" id="qty" value="1">
+  <button onclick="increase()">+</button>
+</div>
+
+<script>
+  function increase() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    input.value = value + 1;
+  }
+
+  function decrease() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    if (value > 1) {
+      input.value = value - 1;
+    }
+  }
+</script>
+      <div class="actions">
+        <button class="btn-cart">THÊM VÀO GIỎ</button>
+        <button class="btn-buy">MUA NGAY</button>
+      </div>
+    </div>
+  <div class="service-promo">
+  <h4>Dịch vụ & Khuyến mãi</h4>
+  <ul>
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon tag">🏷️</span>
+      Đối với sản phẩm giảm 40% - 50% - 70% (sản phẩm xả kho):
+      Mỗi khách hàng được mua tối đa 3 sản phẩm / 1 mặt hàng / 1 đơn hàng
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm Bookmark (đánh dấu trang) cho các sách Kĩ năng sống,
+      Kinh doanh, Mẹ và Bé, Văn học
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      FREESHIP cho đơn hàng từ 300K trở lên
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm 1 VOUCHER 20K cho đơn từ 500K trở lên
+    </li>
+  </ul>
+</div>
+</div>
+
+  </main>
+  <section class="book-intro">
+  <h3>Giới thiệu sách</h3>
+  <p>
+Đại Việt Sử Ký Toàn Thư là bộ quốc sử danh tiếng, một di sản quý báu của dân tộc Việt Nam nghìn năm văn hiến.
+</p>
+<p>
+Đó là bộ sử cái, có giá trị nhiều mặt, gắn liền với tên tuổi các nhà sử học nổi tiếng như Lê Văn Hưu, Phan Phu Tiên, Ngô Sĩ Liên, Phạm Công Trứ, Lê Hy.
+</p>
+<p>
+Việc phát hiện bản in xưa nhất của bộ Đại Việt Sử Ký Toàn Thư, bản Nội các quan bản, năm Chính Hòa thứ 18 (1697) có một ý nghĩa đặc biệt.
+</p>
+<p>
+Bộ sách đã được ra mắt bạn đọc vào những năm 90 của thế kỷ trước và từng được tái bản trong những năm gần đây.
+</p>
+<p>
+Nội dung gồm có:
+</p>
+<p>
+Đầu tiên là Sử ký toàn thư do Ngô Sĩ Liên dựa vào bộ Đại Việt sử ký của Lê Văn Hưu và bộ Sử ký tục biên của Phan Phu Tiên mà viết ra hồi nửa cuối thế kỉ XV.
+</p>
+<p>
+Tiếp theo là Khâm định Việt sử thông giám cương mục, bản dịch lấy tên là Việt Sử thông giám cương mục.
+</p>
+<p>
+Nhiều người đã biết, bộ Đại Việt sử ký toàn thư của Lê Văn Hưu là bộ thông sử xưa nhất và đầy đủ nhất.
+</p>
+<p>
+1. Đại Việt sử ký ngoại kỷ toàn thư
+</p>
+<p>
+- Quyển I: Kỷ Hồng Bàng thị
+</p>
+<p>
+- Quyển II: Kỷ Nhà Triệu
+</p>
+<p>
+- Quyển III: Kỷ thuộc Tây Hán; Kỷ Trưng Nữ Vương; Kỷ thuộc Đông Hán; Kỷ Sĩ Vương
+</p>
+<p>
+- Quyển IV: Kỷ thuộc Ngô Tấn; Kỷ Nhà Tiền Lý; Kỷ Triệu Việt Vương; Kỷ Hậu Lý
+</p>
+<p>
+- Quyển V: Kỷ thuộc Tuỳ Đường; Kỷ Nam Bắc phân tranh; Kỷ Nhà Ngô
+</p>
+<p>
+2. Đại Việt sử ký bản kỷ toàn thư
+</p>
+<p>
+- Quyển I: Kỷ nhà Đinh; Kỷ nhà Lê
+</p>
+<p>
+- Quyển II: Kỷ nhà Lý
+</p>
+<p>
+- Quyển III
+</p>
+<p>
+- Quyển IV
+</p>
+<p>
+- Quyển V: Kỷ nhà Trần
+</p>
+<p>
+- Quyển VI
+</p>
+<p>
+- Quyển VII
+</p>
+<p>
+- Quyển VIII
+</p>
+<p>
+- Quyển IX: Kỷ Hậu Trần; Kỷ thuộc Minh
+</p>
+<p>
+3. Đại Việt sử ký bản thực lục
+</p>
+<p>
+- Quyển X: Kỷ Nhà Lê
+</p>
+<p>
+- Quyển XI
+</p>
+<p>
+- Quyển XII
+</p>
+<p>
+- Quyển XIII
+</p>
+<p>
+- Quyển XIV
+</p>
+<p>
+- Quyển XV
+</p>
+<p>
+- Quyển XVI
+</p>
+<p>
+- Quyển XVII
+</p>
+<p>
+- Quyển XVIII
+</p>
+<p>
+- Quyển XIX
+</p>
+</section>
+  <!-- Thông tin chi tiết -->
+<section class="book-specs">
+  <h3>Thông tin chi tiết</h3>
+  <table>
+    <tr>
+      <td>Mã hàng</td>
+      <td>72482898</td>
+    </tr>
+    <tr>
+      <td>Tên Nhà Cung Cấp</td>
+      <td>NXB Kim Đồng</td>
+    </tr>
+    <tr>
+      <td>Tác giả</td>
+      <td>Ngô Sĩ Liên</td>
+    </tr>
+    <tr>
+      <td>Người dịch</td>
+      <td>Cao Huy Giu - Đào Duy Anh hiệu đính</td>
+    </tr>
+    <tr>
+      <td>NXB</td>
+      <td>Nhà Xuất Bản Thanh Niên</td>
+    </tr>
+    <tr>
+      <td>Năm XB</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td>Ngôn ngữ</td>
+      <td>Tiếng Việt</td>
+    </tr>
+    <tr>
+      <td>Trọng lượng (gr)</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>Kích thước bao bì</td>
+      <td>16 x 24 cm</td>
+    </tr>
+    <tr>
+      <td>Số trang</td>
+      <td>1284</td>
+    </tr>
+    <tr>
+      <td>Hình thức</td>
+      <td>Bìa cứng</td>
+    </tr>
+  </table>
+</section>
+  <footer>
+    <p>© 2025 The GoldenStar</p>
+  </footer>
+</body>
+</html>
+

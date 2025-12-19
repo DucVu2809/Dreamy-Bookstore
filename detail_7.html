@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sách - GSLibrary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="Logo">
+      </a>
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm...">
+      <button>Tìm kiếm</button>
+    </div>
+    <div class="header-icons">
+      <a href="#">🗒️Tra cứu đơn hàng</a>
+      <a href="#">🛒Giỏ hàng (0)</a>
+      <a href="#">💳Tài khoản</a>
+    </div>
+  </header>
+  <!-- Menu -->
+  <nav class="main-nav">
+      <ul>
+      <li><a href="index.html">Danh mục sách</a></li>
+      <li><a href="skills.html">Sản phẩm đã xem </a></li>
+      <li>🚚 Ship COD</li>
+      <li>🎁 Free Ship</li>
+      <li class="hotline">📞 Hotline 0969 6969 696 / 0363 6363 636</li>
+    </ul>
+  </nav>
+
+     <main class="book-detail">
+    <!-- Ảnh bìa -->
+    <div class="book-cover">
+      <img src="images/newbook1.png" alt="New Book 1">
+    </div>
+    <!--Chi tiết sách-->
+  <div class="book-info">
+      <h2>Tôi Dạo Này Ra Sao?</h2>
+      <p><strong>Tác giả:</strong> Corey Yeager</p>
+      <p><strong>Dịch giả:</strong> Cao Hằng</p>
+      <p><strong>NXB:</strong> NXB Hồng Đức</p>
+
+      <div class="price-box">
+        <span class="price-sale">80.000₫</span>
+        <span class="price-old">100.000₫</span>
+      </div>
+
+            <div class="quantity">
+  <button onclick="decrease()">-</button>
+  <input type="text" id="qty" value="1">
+  <button onclick="increase()">+</button>
+</div>
+
+<script>
+  function increase() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    input.value = value + 1;
+  }
+
+  function decrease() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    if (value > 1) {
+      input.value = value - 1;
+    }
+  }
+</script>
+
+      <div class="actions">
+        <button class="btn-cart">THÊM VÀO GIỎ</button>
+        <button class="btn-buy">MUA NGAY</button>
+      </div>
+      <div class="service-promo">
+  <h4>Dịch vụ & Khuyến mãi</h4>
+  <ul>
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon tag">🏷️</span>
+      Đối với sản phẩm giảm 40% - 50% - 70% (sản phẩm xả kho):
+      Mỗi khách hàng được mua tối đa 3 sản phẩm / 1 mặt hàng / 1 đơn hàng
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm Bookmark (đánh dấu trang) cho các sách Kĩ năng sống,
+      Kinh doanh, Mẹ và Bé, Văn học
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      FREESHIP cho đơn hàng từ 300K trở lên
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm 1 VOUCHER 20K cho đơn từ 500K trở lên
+    </li>
+  </ul>
+</div>
+    </div>
+  </main>
+  <section class="book-intro">
+  <h3>Giới thiệu sách</h3>
+    <p>Cuốn sách "Tôi dạo này ra sao?" là tuyển tập 40 cuộc trò chuyện linh hoạt, giúp bạn hiểu rõ hơn về bản thân, về những gì bạn muốn và đâu là định hướng của bạn. Điều đặc biệt là khi đọc những lời thổ lộ của tiến sĩ Corey Yeager - tác giả cuốn sách này - bạn cũng sẽ có cơ hội để trải lòng, thổ lộ những lời chưa nói.</p>
+    <p>40 câu hỏi trong "Tôi dạo này ra sao?" là cơ hội đắt giá để bạn xác định con đường hướng tới sự vĩ đại của riêng mình, bất kể con đường đó ra sao, đồng thời nắm lấy quyền sở hữu con người mà bạn sẽ trở thành.</p>
+    <p>Trong cuốn sách này, tác giả Corey Yeager nói rất nhiều về "nhận thức" và làm thế nào mà "nhận thức" là bước đầu trong hành trình khám phá con người bạn. Cuốn sách "Tôi dạo này ra sao?" không chỉ ra bạn cần thay đổi cuộc sống như thế nào hoặc cung cấp chỉ dẫn rõ ràng về những điều bạn nên làm tiếp theo. Thay vào đó, cuốn sách sẽ cho bạn nhận thức bạn cần để thực hiện các bước tiếp theo, giúp khôi phục bản thân và trở thành phiên bản tốt nhất của chính bạn.</p>
+    <p>Mỗi câu hỏi trong cuốn sách sẽ đi kèm với một phần suy ngẫm ngắn gọn, sâu sắc, cùng với các gợi ý và chiến lược tự chăm sóc sẽ giúp bạn nhìn nhận lại chính mình và hòa hợp với con người mà bạn mong muốn trở thành.</p>
+    <p>Hãy bắt đầu hành trình tuyệt vời này bằng câu hỏi: "Tôi dạo này ra sao?".</p>
+</section>
+
+<!-- Thông tin chi tiết -->
+<section class="book-specs">
+  <h3>Thông tin chi tiết</h3>
+  <table>
+    <tr>
+      <td>Mã hàng</td>
+      <td>8936067611359</td>
+    </tr>
+    <tr>
+      <td>Tên Nhà Cung Cấp</td>
+      <td>NXB Hồng Đức</td>
+    </tr>
+    <tr>
+      <td>Tác giả</td>
+      <td>Corey Yeager</td>
+    </tr>
+    <tr>
+      <td>Người dịch</td>
+      <td>Cao Hằng</td>  
+    </tr>
+    <tr>
+      <td>NXB</td>
+      <td>NXB Hồng Đức</td>
+    </tr>
+    <tr>
+      <td>Năm XB</td>
+      <td>2025</td>
+    </tr>
+    <tr>
+      <td>Ngôn ngữ</td>
+      <td>Tiếng Việt</td>
+    </tr>
+    <tr>
+      <td>Trọng lượng (gr)</td>
+      <td>280</td>
+    </tr>
+    <tr>
+      <td>Kích thước bao bì</td>
+      <td>20.5 x 15 x 1.3 cm</td>
+    </tr>
+    <tr>
+      <td>Số trang</td>
+      <td>260</td>
+    </tr>
+    <tr>
+      <td>Hình thức</td>
+      <td>Bìa mềm</td>
+    </tr>
+  </table>
+</section>
+  <footer>
+    <p>© 2025 The GoldenStar</p>
+  </footer>
+</body>
+</html>

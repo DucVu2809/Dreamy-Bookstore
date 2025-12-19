@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sách - GSLibrary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="Logo">
+      </a>
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm...">
+      <button>Tìm kiếm</button>
+    </div>
+    <div class="header-icons">
+      <a href="#">🗒️Tra cứu đơn hàng</a>
+      <a href="#">🛒Giỏ hàng (0)</a>
+      <a href="#">💳Tài khoản</a>
+    </div>
+  </header>
+  <!-- Menu -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Danh mục sách</a></li>
+      <li><a href="skills.html">Sản phẩm đã xem </a></li>
+      <li>🚚 Ship COD</li>
+      <li>🎁 Free Ship</li>
+      <li class="hotline">📞 Hotline 0969 6969 696 / 0363 6363 636</li>
+    </ul>
+  </nav>
+
+     <main class="book-detail">
+    <!-- Ảnh bìa -->
+    <div class="book-cover">
+      <img src="images/14.png" alt="skillbook14">
+    </div>
+    <!--Chi tiết sách-->
+  <div class="book-info">
+      <h2>Văn học Việt Nam hiện đại</h2>
+      <p><strong>Tác giả:</strong> Nhiều tác giả</p>
+      <p><strong>Dịch giả:</strong> </p>
+      <p><strong>NXB:</strong>NXB Việt Nam</p>
+
+      <div class="price-box">
+        <span class="price-sale">344.000₫</span>
+        <span class="price-old">500.000₫</span>
+
+<div class="quantity">
+  <button onclick="decrease()">-</button>
+  <input type="text" id="qty" value="1">
+  <button onclick="increase()">+</button>
+</div>
+
+<script>
+  function increase() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    input.value = value + 1;
+  }
+
+  function decrease() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    if (value > 1) {
+      input.value = value - 1;
+    }
+  }
+</script>
+      <div class="actions">
+        <button class="btn-cart">THÊM VÀO GIỎ</button>
+        <button class="btn-buy">MUA NGAY</button>
+      </div>
+    </div>
+  <div class="service-promo">
+  <h4>Dịch vụ & Khuyến mãi</h4>
+  <ul>
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon tag">🏷️</span>
+      Đối với sản phẩm giảm 40% - 50% - 70% (sản phẩm xả kho):
+      Mỗi khách hàng được mua tối đa 3 sản phẩm / 1 mặt hàng / 1 đơn hàng
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm Bookmark (đánh dấu trang) cho các sách Kĩ năng sống,
+      Kinh doanh, Mẹ và Bé, Văn học
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      FREESHIP cho đơn hàng từ 300K trở lên
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm 1 VOUCHER 20K cho đơn từ 500K trở lên
+    </li>
+  </ul>
+</div>
+</div>
+
+  </main>
+  <section class="book-intro">
+  <h3>Giới thiệu sách</h3>
+<p>Từ đầu thế kỉ XX, nền văn học Việt Nam phát triển theo hướng hiện đại hoá và đã đạt được nhiều thành tựu rực rỡ. Nghiên cứu văn học hiện đại Việt Nam đóng vai trò quan trọng trong việc giúp chúng ta hiểu rõ tiến trình phát triển văn hoá, xã hội và lịch sử của dân tộc, qua đó, chúng ta không chỉ khám phá được các giá trị nghệ thuật và tư tưởng của các tác phẩm văn học, mà còn thấy được những biến đổi sâu sắc trong tư duy và cảm quan của người Việt Nam qua từng thời kì. </p>
+<p>Ông chỉ vậy, nghiên cứu văn học hiện đại còn là cơ sở để phát triển các phương pháp tiếp cận mới, mở ra những hướng đi mới trong nghiên cứu văn học và giảng dạy. Việc này không chỉ giúp nâng cao nhận thức về các giá trị văn học mà còn đóng góp vào việc xây dựng một nền văn hoá, giáo dục phong phú và toàn diện</p>
+<p>Thế kỉ XXI, việc nhìn lại văn học Việt Nam hiện đại một cách khái quát là một công việc quan trọng của văn học và xã hội. Đây là một công việc to lớn và lâu dài, đòi hỏi sự góp sức của nhiều nhà nghiên cứu với những cách tiếp cận đa dạng trên tinh thần khách quan, khoa học.</p>
+<p>Hểu rõ tầm quan trọng của việc nghiên cứu văn học Việt Nam hiện đại, Nhà xuất bản Đại học Sư phạm trân trọng giới thiệu tới bạn đọc công trình Văn học Việt Nam hiện đại: Tiến trình – Thể loại – Tác giả – Tác phẩm. Công trình hợp những kết quả nghiên cứu trong một thời gian dài của Phó Giáo sư, Nhà giáo Nhân dân Nguyễn Văn Long về các vấn đề quan trọng của văn học Việt Nam hiện đại như đặc điểm, tình hình văn học Việt Nam trong những giai đoạn cụ thể; sự ảnh hưởng của bối cảnh lịch sử tới sự phát triển của văn học; đặc điểm của một số thể loại văn học như thơ, tiểu thuyết, phê bình văn học...; giới thiệu một số tác giả tiêu biểu và đi sâu phân tích một số tác phẩm tiêu biểu của văn học Việt Nam hiện đại.</p>
+<p>ới những tri thức thú vị trong cuốn sách, chúng tôi hi vọng cuốn sách sẽ trở thành một nguồn tài liệu hữu ích, không chỉ cho các nhà nghiên cứu, giáo viên, sinh viên, học sinh mà còn cho tất cả những người yêu mến văn học Việt Nam. Đây là một trong những điều quan trọng góp phần nâng cao tri thức, đóng góp vào sự phát triển bền vững của nền giáo dục và văn hoá nước nhà.</p>
+</section>
+  <!-- Thông tin chi tiết -->
+<section class="book-specs">
+  <h3>Thông tin chi tiết</h3>
+  <table>
+    <tr>
+      <td>Mã hàng</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Tên Nhà Cung Cấp</td>
+      <td>weupbook</td>
+    </tr>
+    <tr>
+      <td>Tác giả</td>
+      <td>Nhiều tác giả</td>
+    </tr>
+    <tr>
+      <td>Người dịch</td>
+    </tr>
+    <tr>
+      <td>NXB</td>
+      <td>Nhà Xuất Việt Nam</td>
+    </tr>
+    <tr>
+      <td>Năm XB</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td>Ngôn ngữ</td>
+      <td>Tiếng Việt</td>
+    </tr>
+    <tr>
+      <td>Trọng lượng (gr)</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>Kích thước bao bì</td>
+      <td>A5</td>
+    </tr>
+    <tr>
+      <td>Số trang</td>
+      <td>750</td>
+    </tr>
+    <tr>
+      <td>Hình thức</td>
+      <td>Bìa mềm</td>
+    </tr>
+  </table>
+</section>
+  <footer>
+    <p>© 2025 The GoldenStar</p>
+  </footer>
+</body>
+</html>
+

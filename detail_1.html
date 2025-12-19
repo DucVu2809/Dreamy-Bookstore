@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sách - GSLibrary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo2.png" alt="Logo">
+      </a>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm...">
+      <button>Tìm kiếm</button>
+    </div>
+
+    <div class="header-icons">
+      <a href="#">🗒️ Tra cứu</a>
+      <a href="#">🛒 Giỏ hàng</a>
+      <a href="#">💳 Tài khoản</a>
+    </div>
+  </header>
+
+  <!-- Menu -->
+  <nav class="main-nav">
+      <ul>
+      <li><a href="index.html">Danh mục sách</a></li>
+      <li><a href="skills.html">Sản phẩm đã xem </a></li>
+      <li>🚚 Ship COD</li>
+      <li>🎁 Free Ship</li>
+      <li class="hotline">📞 Hotline 0969 6969 696 / 0363 6363 636</li>
+    </ul>
+  </nav>
+
+  <!-- Ảnh bìa -->
+  <main class="book-detail">
+    <div class="book-cover">
+      <img src="images/skillbook1.png" alt="New Book 1">
+    </div>
+<!-- Chi tiêt sách -->
+    <div class="book-info">
+      <h2>Sáng tạo trong Thuật toán & Lập trình</h2>
+      <p><strong>Tác giả:</strong> Nguyễn Xuân Huy</p>
+      <p><strong>NXB:</strong> Nhà xuất bản Thông tin Truyền thông</p>
+
+      <div class="price-box">
+        <span class="price-sale">72.000₫</span>
+        <span class="price-old">129.000₫</span>
+      </div>
+<div class="quantity">
+  <button onclick="decrease()">-</button>
+  <input type="text" id="qty" value="1">
+  <button onclick="increase()">+</button>
+</div>
+
+<script>
+  function increase() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    input.value = value + 1;
+  }
+
+  function decrease() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    if (value > 1) {
+      input.value = value - 1;
+    }
+  }
+</script>
+
+      <div class="actions">
+        <button>THÊM VÀO GIỎ</button>
+        <button>MUA NGAY</button>
+      </div>
+      <div class="service-promo">
+  <h4>Dịch vụ & Khuyến mãi</h4>
+  <ul>
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon tag">🏷️</span>
+      Đối với sản phẩm giảm 40% - 50% - 70% (sản phẩm xả kho):
+      Mỗi khách hàng được mua tối đa 3 sản phẩm / 1 mặt hàng / 1 đơn hàng
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm Bookmark (đánh dấu trang) cho các sách Kĩ năng sống,
+      Kinh doanh, Mẹ và Bé, Văn học
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      FREESHIP cho đơn hàng từ 300K trở lên
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm 1 VOUCHER 20K cho đơn từ 500K trở lên
+    </li>
+  </ul>
+</div>
+    </div>
+  </main>
+
+  <!-- Intro -->
+  <section class="book-intro">
+    <h3>Giới thiệu sách</h3>
+Sách “Sáng tạo trong thuật toán và lập trình” được viết bởi GS. TSKH Nguyễn Xuân Huy và được xuất bản bởi nhà xuất bản Thông tin và Truyền thông. Bộ sách gồm 3 tập mang tới cho người đọc những kiến thức học lập trình cơ bản  trong C++ và Pascal. Cuốn sách dành cho các bạn học sinh, sinh viên và những người trong nghề muốn trau dồi, hoàn thiện thêm tri thức trong lĩnh vực lập trình nói chung và lĩnh vực giải thuật nói riêng.Cụ thể, “Sáng tạo trong thuật toán và lập trình” sẽ cung cấp cho các bạn kỹ thuật lập trình. Những kỹ thuật lập trình đó sẽ được minh họa thông qua những bài toán cụ thể tương đương với trình độ nhận thức nâng cao của học sinh và sinh viên.
+Trong đó, các kỹ thuật lập trình và phương pháp xây dựng thuật giải cho những bài toán thường được sử dụng rộng rãi trong quá trình thiết kế, cài đặt các phần mềm ứng dụng trong thực tiễn.Cuốn sách sẽ mang tới những tri thức quý báu đó và giúp người đọc sẽ sớm làm chủ được những kiến thức và ứng dụng được chúng trong thực tế. Ngoài ra, “Sáng tạo trong thuật toán và lập trình” còn mang tới cho người đọc các chương trình viết bằng ngôn ngữ lập trình C++, C# và Pascal. Từ đó giúp bạn có thể dễ dàng so sánh với những lời giải của mình.
+  </section>
+
+  <!-- Specs -->
+  <section class="book-specs">
+    <h3>Thông tin chi tiết</h3>
+    <table>
+      <tr><td>Thể loại</td><td>Công nghệ thông tin</td></tr>
+      <tr><td>Năm</td><td>2019</td></tr>
+      <tr><td>Nhà xuất bản </td><td>Nhà xuất bản Thông tin Truyền thông</td></tr>
+      <tr><td>Kích thước </td><td>14.5x20.5 cm</td></tr>
+      <tr><td>Số trang </td><td> 200 trang</td></tr>
+      <tr><td>Khối lượng </td><td> 300 gram</td></tr>
+      <tr><td>Bìa </td><td> Bìa mềm</td></tr>
+  </table>
+  </section>
+
+  <footer>
+    © 2025 The GoldenStar
+  </footer>
+
+</body>
+</html>

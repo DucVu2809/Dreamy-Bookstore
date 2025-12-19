@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sách - GSLibrary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="Logo">
+      </a>
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm...">
+      <button>Tìm kiếm</button>
+    </div>
+    <div class="header-icons">
+      <a href="#">🗒️Tra cứu đơn hàng</a>
+      <a href="#">🛒Giỏ hàng (0)</a>
+      <a href="#">💳Tài khoản</a>
+    </div>
+  </header>
+  <!-- Menu -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Danh mục sách</a></li>
+      <li><a href="skills.html">Sản phẩm đã xem </a></li>
+      <li>🚚 Ship COD</li>
+      <li>🎁 Free Ship</li>
+      <li class="hotline">📞 Hotline 0969 6969 696 / 0363 6363 636</li>
+    </ul>
+  </nav>
+
+     <main class="book-detail">
+    <!-- Ảnh bìa -->
+    <div class="book-cover">
+      <img src="images/11.png" alt="skillbook11">
+    </div>
+    <!--Chi tiết sách-->
+  <div class="book-info">
+      <h2>Tôi tài giỏi - Bạn cũng thế</h2>
+      <p><strong>Tác giả:</strong> Đào Xuân Hiệp, Huỳnh Lê Trường Phát</p>
+      <p><strong>Dịch giả:</strong> Rainie Nguyen</p>
+      <p><strong>NXB:</strong> AZ Việt Nam</p>
+
+      <div class="price-box">
+        <span class="price-sale">144.000₫</span>
+        <span class="price-old">200.000₫</span>
+
+<div class="quantity">
+  <button onclick="decrease()">-</button>
+  <input type="text" id="qty" value="1">
+  <button onclick="increase()">+</button>
+</div>
+
+<script>
+  function increase() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    input.value = value + 1;
+  }
+
+  function decrease() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    if (value > 1) {
+      input.value = value - 1;
+    }
+  }
+</script>
+      <div class="actions">
+        <button class="btn-cart">THÊM VÀO GIỎ</button>
+        <button class="btn-buy">MUA NGAY</button>
+      </div>
+    </div>
+  <div class="service-promo">
+  <h4>Dịch vụ & Khuyến mãi</h4>
+  <ul>
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon tag">🏷️</span>
+      Đối với sản phẩm giảm 40% - 50% - 70% (sản phẩm xả kho):
+      Mỗi khách hàng được mua tối đa 3 sản phẩm / 1 mặt hàng / 1 đơn hàng
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm Bookmark (đánh dấu trang) cho các sách Kĩ năng sống,
+      Kinh doanh, Mẹ và Bé, Văn học
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      FREESHIP cho đơn hàng từ 300K trở lên
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm 1 VOUCHER 20K cho đơn từ 500K trở lên
+    </li>
+  </ul>
+</div>
+</div>
+
+  </main>
+  <section class="book-intro">
+  <h3>Giới thiệu sách</h3>
+  <p>
+Cuốn sách " Tôi Tài Giỏi, Bạn Cũng Thế"  sẽ hỗ trợ người luyện tập tăng mạnh sự tự tin, đẩy mạnh trí nhớ. thuần thục việc xử dụng thời gian, vận dụng những cách thức để thi tuyển hiệu quả, ... 
+  </p>
+  <p>
+Cuốn sách gồm các phần :</p> 
+<p>Lời khai mạc của Tony Buzan và Ernest Wong</p>
+<p>Phần 1: Tôi tài giỏi, bạn cũng thế!</p>
+<p>Chương 1: Từ ngu si trở nên thiên tài</p>
+<p>Chương 2: qui trình tiếp thu kiến thức hiệu quả</p>
+<p>Chương 3: Bạn đã chuẩn bị để thành đạt chưa?</p>
+<p>Chương 4: Tôi tin tôi hoàn toàn có thể bay cao… và tôi làm được</p>
+<p>Phần 2: Những cách thức học siêu đẳng</p>
+<p>Chương 5: Bạn chiếm hữu khối óc của 1 thiên tài</p>
+<p>Chương 6: cách thức đọc để thâu tóm thông tin</p>
+<p>Chương 7: lược đồ tư duy: máy móc chú thích tối ưu</p>
+<p>Chương 8: Trí nhờ siêu việt giành cho từ</p>
+<p>Chương 9: trí tưởng ngoại hạng giành riêng cho số</p>
+<p>Chương 10: quy mô trí nhớ</p>
+<p>Chương 11: thẩm mỹ phần mềm định hướng vào thực hành</p>
+<p>Phần 3: Động lực tư nhân của bạn</p>
+<p>Chương 12: Dám mơ ước: sức khỏe của mục tiêu</p>
+<p>Chương 13: Động lực mạnh mẽ và tự tin - vượt lên sự lười biếng</p>
+<p>Chương 14: cách thức để lấy điểm tuyệt đối</p>
+<p>Chương 15: thời kì là tiền bạc</p>
+<p>Chương 16: Tạo kiên tâm uy lực tức thì</p>
+<p>Phần 4: cách thức thi cử</p>
+<p>Chương 17: tăng cường về đích</p>
+<p>Chương 18: vật phẩm và vinh quang.</p>
+</section>
+  <!-- Thông tin chi tiết -->
+<section class="book-specs">
+  <h3>Thông tin chi tiết</h3>
+  <table>
+    <tr>
+      <td>Mã hàng</td>
+      <td>12345678</td>
+    </tr>
+    <tr>
+      <td>Tên Nhà Cung Cấp</td>
+      <td>NXB Thanh Niên</td>
+    </tr>
+    <tr>
+      <td>Tác giả</td>
+      <td>Nhiều tác giả</td>
+    </tr>
+    <tr>
+      <td>Người dịch</td>
+      <td>NXB Phụ nữ</td>
+    </tr>
+    <tr>
+      <td>NXB</td>
+      <td>Nhà Xuất Bản Phụ nữ</td>
+    </tr>
+    <tr>
+      <td>Năm XB</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td>Ngôn ngữ</td>
+      <td>Tiếng Việt</td>
+    </tr>
+    <tr>
+      <td>Trọng lượng (gr)</td>
+      <td>450</td>
+    </tr>
+    <tr>
+      <td>Kích thước bao bì</td>
+      <td>A5</td>
+    </tr>
+    <tr>
+      <td>Số trang</td>
+      <td>376</td>
+    </tr>
+    <tr>
+      <td>Hình thức</td>
+      <td>Bìa mềm</td>
+    </tr>
+  </table>
+</section>
+  <footer>
+    <p>© 2025 The GoldenStar</p>
+  </footer>
+</body>
+</html>
+

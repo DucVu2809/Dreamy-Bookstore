@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sách - GSLibrary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="Logo">
+      </a>
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm...">
+      <button>Tìm kiếm</button>
+    </div>
+    <div class="header-icons">
+      <a href="#">🗒️Tra cứu đơn hàng</a>
+      <a href="#">🛒Giỏ hàng (0)</a>
+      <a href="#">💳Tài khoản</a>
+    </div>
+  </header>
+  <!-- Menu -->
+  <nav class="main-nav">
+      <ul>
+      <li><a href="index.html">Danh mục sách</a></li>
+      <li><a href="skills.html">Sản phẩm đã xem </a></li>
+      <li>🚚 Ship COD</li>
+      <li>🎁 Free Ship</li>
+      <li class="hotline">📞 Hotline 0969 6969 696 / 0363 6363 636</li>
+    </ul>
+  </nav>
+
+     <main class="book-detail">
+    <!-- Ảnh bìa -->
+    <div class="book-cover">
+      <img src="images/newbook2.png" alt="New Book 2">
+    </div>
+    <!--Chi tiết sách-->
+  <div class="book-info">
+      <h2>Dám Nói "Không"</h2>
+      <p><strong>Tác giả:</strong> Nguyễn Anh Dũng</p>
+      <p><strong>Dịch giả:</strong> </p>
+      <p><strong>NXB:</strong> NXB Dân Trí</p>
+
+      <div class="price-box">
+        <span class="price-sale">79.000₫</span>
+        <span class="price-old">118.000₫</span>
+      </div>
+
+            <div class="quantity">
+  <button onclick="decrease()">-</button>
+  <input type="text" id="qty" value="1">
+  <button onclick="increase()">+</button>
+</div>
+
+<script>
+  function increase() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    input.value = value + 1;
+  }
+
+  function decrease() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    if (value > 1) {
+      input.value = value - 1;
+    }
+  }
+</script>
+
+      <div class="actions">
+        <button class="btn-cart">THÊM VÀO GIỎ</button>
+        <button class="btn-buy">MUA NGAY</button>
+      </div>
+      <div class="service-promo">
+  <h4>Dịch vụ & Khuyến mãi</h4>
+  <ul>
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon tag">🏷️</span>
+      Đối với sản phẩm giảm 40% - 50% - 70% (sản phẩm xả kho):
+      Mỗi khách hàng được mua tối đa 3 sản phẩm / 1 mặt hàng / 1 đơn hàng
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm Bookmark (đánh dấu trang) cho các sách Kĩ năng sống,
+      Kinh doanh, Mẹ và Bé, Văn học
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      FREESHIP cho đơn hàng từ 300K trở lên
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm 1 VOUCHER 20K cho đơn từ 500K trở lên
+    </li>
+  </ul>
+</div>
+    </div>
+  </main>
+  <section class="book-intro">
+  <h3>Giới thiệu sách</h3>
+    <p>Bạn đã bao giờ cảm thấy bị ép buộc phải nói “có” khi thực sự muốn nói “không” chưa? Trong một thế giới nơi áp lực xã hội và kỳ vọng không ngừng tăng cao, việc tự lập và bảo vệ giới hạn của bản thân trở thành một thách thức đối với nhiều người.</p>
+    <p>Cuốn sách “Dám Nói Không “No”” không chỉ là một cuốn sách, mà là một hành trình khám phá sâu sắc vào sức mạnh của từ chối và tự tin. Trong cuốn sách này, chúng tôi không chỉ đề cập đến việc nói “không” mà còn tạo ra một khung nhìn toàn diện về sự tự lập, quản lý thời gian, và quyết định.</p>
+    <p>Từ việc học cách định rõ giá trị của bản thân đến việc phát triển kỹ năng giao tiếp hiệu quả, “Dám Nói Không” không chỉ là một cuốn sách, mà còn là một người bạn đồng hành trong việc bạn xây dựng một cuộc sống đầy ý nghĩa và tự do.</p>
+    <p>Chúng ta nhận thức được rằng việc biết khi nào và làm thế nào để nói “không” là một bước quan trọng trong việc thiết lập ranh giới, bảo vệ sức khỏe tinh thần và thể chất của chúng ta, và định hình một cuộc sống đáng sống.</p>
+    <p>Cuối cùng, chúng ta được khuyến khích không chỉ để dũng cảm nói “không” với người khác mà còn với chính bản thân mình. Chỉ khi chúng ta học được cách từ chối những thứ không phù hợp hoặc không lành mạnh, chúng ta mới có thể tìm ra những cơ hội thực sự phản ánh giá trị và mục tiêu của chúng ta.</p>
+    <p>Hy vọng rằng, các bạn sẽ rời khỏi trang cuối cùng của cuốn sách này với sự tự tin và kiên định, sẵn lòng nói “không” khi cần thiết để tạo ra một cuộc sống đáng sống và đạt được sự hài lòng và thành công mà chúng ta đề ra.</p>
+</section>
+
+<!-- Thông tin chi tiết -->
+<section class="book-specs">
+  <h3>Thông tin chi tiết</h3>
+  <table>
+    <tr>
+      <td>Mã hàng</td>
+      <td>9786044026817</td>
+    </tr>
+    <tr>
+      <td>Tên Nhà Cung Cấp</td>
+      <td>SBooks</td>
+    </tr>
+    <tr>
+      <td>Tác giả</td>
+      <td>Nguyễn Anh Dũng</td>
+    </tr>
+    <tr>
+      <td>Người dịch</td>
+      <td></td>  
+    </tr>
+    <tr>
+      <td>NXB</td>
+      <td>NXB Dân Trí</td>
+    </tr>
+    <tr>
+      <td>Năm XB</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td>Ngôn ngữ</td>
+      <td>Tiếng Việt</td>
+    </tr>
+    <tr>
+      <td>Trọng lượng (gr)</td>
+      <td>220</td>
+    </tr>
+    <tr>
+      <td>Kích thước bao bì</td>
+      <td>13 x 20 cm</td>
+    </tr>
+    <tr>
+      <td>Số trang</td>
+      <td>204</td>
+    </tr>
+    <tr>
+      <td>Hình thức</td>
+      <td>Bìa mềm</td>
+    </tr>
+  </table>
+</section>
+  <footer>
+    <p>© 2025 The GoldenStar</p>
+  </footer>
+</body>
+</html>

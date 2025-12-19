@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sách - GSLibrary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="Logo">
+      </a>
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm...">
+      <button>Tìm kiếm</button>
+    </div>
+    <div class="header-icons">
+      <a href="#">🗒️Tra cứu đơn hàng</a>
+      <a href="#">🛒Giỏ hàng (0)</a>
+      <a href="#">💳Tài khoản</a>
+    </div>
+  </header>
+  <!-- Menu -->
+  <nav class="main-nav">
+      <ul>
+      <li><a href="index.html">Danh mục sách</a></li>
+      <li><a href="skills.html">Sản phẩm đã xem </a></li>
+      <li>🚚 Ship COD</li>
+      <li>🎁 Free Ship</li>
+      <li class="hotline">📞 Hotline 0969 6969 696 / 0363 6363 636</li>
+    </ul>
+  </nav>
+
+     <main class="book-detail">
+    <!-- Ảnh bìa -->
+    <div class="book-cover">
+      <img src="images/newbook3.png" alt="New Book 3">
+    </div>
+    <!--Chi tiết sách-->
+  <div class="book-info">
+      <h2>Kĩ Năng Để Thành Công</h2>
+      <p><strong>Tác giả:</strong> Stella Cottrell</p>
+      <p><strong>Dịch giả:</strong> </p>
+      <p><strong>NXB:</strong> NXB Văn học</p>
+
+      <div class="price-box">
+        <span class="price-sale">39.000₫</span>
+        <span class="price-old">92.000₫</span>
+      </div>
+
+          <div class="quantity">
+  <button onclick="decrease()">-</button>
+  <input type="text" id="qty" value="1">
+  <button onclick="increase()">+</button>
+</div>
+
+<script>
+  function increase() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    input.value = value + 1;
+  }
+
+  function decrease() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    if (value > 1) {
+      input.value = value - 1;
+    }
+  }
+</script>
+
+      <div class="actions">
+        <button class="btn-cart">THÊM VÀO GIỎ</button>
+        <button class="btn-buy">MUA NGAY</button>
+      </div>
+      <div class="service-promo">
+  <h4>Dịch vụ & Khuyến mãi</h4>
+  <ul>
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon tag">🏷️</span>
+      Đối với sản phẩm giảm 40% - 50% - 70% (sản phẩm xả kho):
+      Mỗi khách hàng được mua tối đa 3 sản phẩm / 1 mặt hàng / 1 đơn hàng
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm Bookmark (đánh dấu trang) cho các sách Kĩ năng sống,
+      Kinh doanh, Mẹ và Bé, Văn học
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      FREESHIP cho đơn hàng từ 300K trở lên
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm 1 VOUCHER 20K cho đơn từ 500K trở lên
+    </li>
+  </ul>
+</div>
+    </div>
+  </main>
+  <section class="book-intro">
+  <h3>Giới thiệu sách</h3>
+    <p>I. Đây là cuốn sách dành cho mọi người</p>
+    <p>Dù mục tiêu của bạn đang là có được công việc đầu tiên, một công việc mới hoặc tốt hơn, sự thăng tiến trong công việc, sự thay đổi sự nghiệp hay sự đánh giá cao ở nơi làm việc, thì bạn đều có thể tìm được điều gì đó hữu dụng ở cuốn sách này. Nội dung cuốn sách tập trung vào các kĩ năng, hành vi và cách suy nghĩ có liên quan đến nhiều bậc học và những giá trị trong đời sống công việc.</p>
+    <p>II. Cuốn KĨ NĂNG ĐỂ THÀNH CÔNG có thể định hình tương lai của bạn</p>
+    <p>Cùng với những hướng dẫn thực tế, cuốn sách này còn cho bạn cơ hội để tạm nghỉ và xem xét những câu hỏi đặc biệt quan trọng về bản thân, tương lai và cả con người mà bạn muốn được trở thành - những câu hỏi như:</p>
+    <p>- Đối với tôi, thế nào là "thành công": Khi sinh viên , khi đi làm và trong cuộc sống nói chung?</p>
+    <p>- Những kĩ năng, kinh nghiệm và phẩm chất nào là cần thiết để đạt được thành công đó?</p>
+    <p>- Làm thế nào để tôi đi từ vị trí hiện tại đến vị trí mà tôi mong muốn trong tương lai?</p>
+    <p>- Bây giờ tôi có thể làm gì để giúp bản thân trong tương lai?</p>
+    <p>Bên cạnh mục tiêu giúp đỡ bạn phát triển thái độ đúng đắn, sự tự tin, hiểu biết, những thói quen tốt và những kĩ năng cơ bản để thành công trong thế giới công việc, cuốn sách KĨ NĂNG ĐỂ THÀNH CÔNG sẽ:</p>
+    <p>- Khuyến khích, cho phép bạn tập trung vào bản thân và những gì bạn mong muốn cho chính mình trong cuộc sống.</p>
+    <p>- Đưa ra những chỉ dẫn thực tiễn để phát triển các kĩ năng, thói quen, hành vi và cách nghĩ có khả năng thúc đẩy và hỗ trợ cho thành công.</p>
+    <p>- Cung cấp những kiến thức trong thế giới việc làm về những gì được trông đợi và cách để có được loại công việc bạn muốn.</p>
+    <p>- Những suy ngẫm, quan sát, tự đánh giá một cách có cấu trúc và các hoạt động để kích thích ý tưởng, hỗ trợ cho quá trình suy nghĩ của bạn và hướng dẫn hành động.</p>
+    <p>- Cung cấp nguồn tài nguyên để hỗ trợ bạn ghi chép lại lịch sử, trải nghiệm những kĩ năng và suy ngẫm của cá nhân bạn để những thông tin này luôn sẵn có cho bạn dễ dàng sử dụng khi ứng tuyển các công việc.</p>
+    <p>III. Đây là một cuốn sách được đón nhận bởi tất cả mọi người, bao gồm cả các nhà giáo dục và chủ sử dụng lao động ở nhiều quốc gia!</p>
+    <p>Cuốn sách KĨ NĂNG ĐỂ THÀNH CÔNG đã được đón nhận không chỉ bởi hàng trăm nghìn sinh viên và người đi làm trên khắp thế giới mà còn được đánh giá cao bởi các nhà giáo dục và chủ sử dụng lao động ở nhiều quốc gia.</p>
+    <p>Đây là một cuốn cẩm nang đầy đủ, thiết thực, dễ áp dụng cho bất cứ ai muốn trang bị cho mình những kĩ năng và sự hiểu biết quan trọng để tự tin bước vào thế giới việc làm cũng như đạt được những tham vọng trong sự nghiệp.</p>
+</section>
+
+<!-- Thông tin chi tiết -->
+<section class="book-specs">
+  <h3>Thông tin chi tiết</h3>
+  <table>
+    <tr>
+      <td>Mã hàng</td>
+      <td>9786326171433</td>
+    </tr>
+    <tr>
+      <td>Tên Nhà Cung Cấp</td>
+      <td>MinhLong Book</td>
+    </tr>
+    <tr>
+      <td>Tác giả</td>
+      <td>Stella Cottrell</td>
+    </tr>
+    <tr>
+      <td>Người dịch</td>
+      <td></td>  
+    </tr>
+    <tr>
+      <td>NXB</td>
+      <td>NXB Văn Học</td>
+    </tr>
+    <tr>
+      <td>Năm XB</td>
+      <td>2025</td>
+    </tr>
+    <tr>
+      <td>Ngôn ngữ</td>
+      <td>Tiếng Việt</td>
+    </tr>
+    <tr>
+      <td>Trọng lượng (gr)</td>
+      <td>729</td>
+    </tr>
+    <tr>
+      <td>Kích thước bao bì</td>
+      <td>24 x 17 x 1 cm</td>
+    </tr>
+    <tr>
+      <td>Số trang</td>
+      <td>828</td>
+    </tr>
+    <tr>
+      <td>Hình thức</td>
+      <td>Bìa mềm</td>
+    </tr>
+  </table>
+</section>
+  <footer>
+    <p>© 2025 The GoldenStar</p>
+  </footer>
+</body>
+</html>
