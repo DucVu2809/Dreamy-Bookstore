@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi Tiết Sách - GSLibrary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="Logo">
+      </a>
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm...">
+      <button>Tìm kiếm</button>
+    </div>
+    <div class="header-icons">
+      <a href="#">🗒️Tra cứu đơn hàng</a>
+      <a href="#">🛒Giỏ hàng (0)</a>
+      <a href="#">💳Tài khoản</a>
+    </div>
+  </header>
+  <!-- Menu -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Danh mục sách</a></li>
+      <li><a href="skills.html">Sản phẩm đã xem </a></li>
+      <li>🚚 Ship COD</li>
+      <li>🎁 Free Ship</li>
+      <li class="hotline">📞 Hotline 0969 6969 696 / 0363 6363 636</li>
+    </ul>
+  </nav>
+
+     <main class="book-detail">
+    <!-- Ảnh bìa -->
+    <div class="book-cover">
+      <img src="images/skillbook2.png" alt="skillbook2">
+    </div>
+    <!--Chi tiết sách-->
+  <div class="book-info">
+      <h2>Sổ tay "Dân IT"</h2>
+      <p><strong>Tác giả:</strong> Đào Xuân Hiệp, Huỳnh Lê Trường Phát</p>
+      <p><strong>Dịch giả:</strong> Rainie Nguyen</p>
+      <p><strong>NXB:</strong> AZ Việt Nam</p>
+
+      <div class="price-box">
+        <span class="price-sale">144.000₫</span>
+        <span class="price-old">200.000₫</span>
+
+<div class="quantity">
+  <button onclick="decrease()">-</button>
+  <input type="text" id="qty" value="1">
+  <button onclick="increase()">+</button>
+</div>
+
+<script>
+  function increase() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    input.value = value + 1;
+  }
+
+  function decrease() {
+    let input = document.getElementById("qty");
+    let value = parseInt(input.value);
+    if (value > 1) {
+      input.value = value - 1;
+    }
+  }
+</script>
+      <div class="actions">
+        <button class="btn-cart">THÊM VÀO GIỎ</button>
+        <button class="btn-buy">MUA NGAY</button>
+      </div>
+    </div>
+  <div class="service-promo">
+  <h4>Dịch vụ & Khuyến mãi</h4>
+  <ul>
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon tag">🏷️</span>
+      Đối với sản phẩm giảm 40% - 50% - 70% (sản phẩm xả kho):
+      Mỗi khách hàng được mua tối đa 3 sản phẩm / 1 mặt hàng / 1 đơn hàng
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm Bookmark (đánh dấu trang) cho các sách Kĩ năng sống,
+      Kinh doanh, Mẹ và Bé, Văn học
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      FREESHIP cho đơn hàng từ 300K trở lên
+    </li>
+
+    <li>
+      <span class="icon check">✔</span>
+      <span class="icon gift">🎁</span>
+      Tặng kèm 1 VOUCHER 20K cho đơn từ 500K trở lên
+    </li>
+  </ul>
+</div>
+</div>
+
+  </main>
+  <section class="book-intro">
+  <h3>Giới thiệu sách</h3>
+  <p>
+Sổ tay 'dân IT' Lập trình web + Lập trình ứng dụng từ cơ bản đến chuyên sâu" là một cuốn sách toàn diện dành cho những ai muốn bước chân vào lĩnh vực lập trình web, từ những người mới bắt đầu đến các lập trình viên có kinh nghiệm muốn nâng cao kiến thức của mình. Cuốn sách này cung cấp một cái nhìn tổng quan giúp bạn hiểu rõ về các ngôn ngữ đánh dấu, kiến thức về lập trình web và các công nghệ liên quan, từ HTML, CSS đến JavaScript và các công nghệ server-side như PHP và SQL cũng như cách chúng hoạt động cùng nhau để tạo ra các trang web đẹp mắt.
+  </p>
+  <p>Bố cục của cuốn sách:</p>
+  <p>Phần 1: Lập trình web</p>
+  <p>- Chương 1: Giới thiệu về lập trình Web</p>
+  <p>- Chương 2: Cơ Bản về HTML và CSS</p>
+  <p>- Chương 3: JavaScript và DOM Manipulation</p>
+  <p>- Chương 4: Ajax và Asynchronous Programming</p>
+  <p>- Chương 5: Cơ Sở Dữ Liệu và SQL, MySQL</p>
+  <p>Phần 2: Lập trình web chuyên sâu và ứng dụng thực tế</p>
+  <p>- Chương 6: Frameworks và Thư Viện Phổ Biến</p>
+  <p>- Chương 7: Authentication và Security</p>
+  <p>- Chương 8: Responsive Web Design và Mobile Development</p>
+  <p>Về nội dung sách :</p>
+  <p>Phần 1 của sách bắt đầu với những kiến thức cơ bản về lập trình web. Giới thiệu về cách thức mạng internet hoạt động và cách các trang web được tạo ra và điều khiển. Đọc giả sẽ học được cách tạo ra những trang web đầu tiên của mình sử dụng HTML và CSS, hai ngôn ngữ cốt lõi của web.</p>
+  <p>Trong phần tiếp theo, cuốn sách đi sâu vào JavaScript và DOM Manipulation, giúp người đọc hiểu và tạo ra các trang web tương tác. Cuốn sách cũng khám phá AJAX và lập trình bất đồng bộ, mở ra cánh cửa đến với lập trình web hiện đại. Phần chuyên sâu cung cấp kiến thức về các công nghệ server-side như SQL và PHP, giúp đọc giả có thể tạo ra những ứng dụng web đầy đủ chức năng.</p>
+  <p>Cuốn sách cũng đi sâu vào các chủ đề như bảo mật trang web, lập trình responsive và phát triển ứng dụng di động, giúp đọc giả có cái nhìn toàn diện về lập trình web và ứng dụng thực tế.Cuốn sách cũng đi sâu vào các chủ đề như bảo mật trang web, lập trình responsive và phát triển ứng dụng di động, giúp đọc giả có cái nhìn toàn diện về lập trình web và ứng dụng thực tế.</p>
+  <p>Cuối cùng, cuốn sách bao gồm các bài tập thực hành và dự án cuối mỗi chương, giúp củng cố kiến thức và kỹ năng lập trình của bạn. Với một phong cách viết rõ ràng và dễ hiểu, cùng với những ví dụ thực tế, "Sổ tay 'dân IT' Lập trình web + Lập trình ứng dụng từ cơ bản đến chuyên sâu" là nguồn tài nguyên quý giá cho bất kỳ ai muốn trở thành một lập trình viên web chuyên nghiệp.</p>
+</section>
+  <!-- Thông tin chi tiết -->
+<section class="book-specs">
+  <h3>Thông tin chi tiết</h3>
+  <table>
+    <tr>
+      <td>Mã hàng</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Tên Nhà Cung Cấp</td>
+      <td>weupbook</td>
+    </tr>
+    <tr>
+      <td>Tác giả</td>
+      <td>Đào Xuân Hiệp, Huỳnh Lê Trường Phát</td>
+    </tr>
+    <tr>
+      <td>Người dịch</td>
+    </tr>
+    <tr>
+      <td>NXB</td>
+      <td>Nhà Xuất Bản Thanh Niên</td>
+    </tr>
+    <tr>
+      <td>Năm XB</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td>Ngôn ngữ</td>
+      <td>Tiếng Việt</td>
+    </tr>
+    <tr>
+      <td>Trọng lượng (gr)</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>Kích thước bao bì</td>
+      <td>A5</td>
+    </tr>
+    <tr>
+      <td>Số trang</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>Hình thức</td>
+      <td>Bìa mềm</td>
+    </tr>
+  </table>
+</section>
+  <footer>
+    <p>© 2025 The GoldenStar</p>
+  </footer>
+</body>
+</html>
+
