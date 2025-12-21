@@ -28,7 +28,7 @@
                 <ul class="navbar-nav align-items-center text-uppercase small spacing-wide gap-3 nav-interaction-group">
 
                     <li class="nav-item">
-                       <a class="nav-link nav-interactive-item" href="book.html">Khám phá</a>
+                       <a class="nav-link nav-interactive-item" href="book.html">Sách mới</a>
                     </li>
 
                     <li class="nav-item">
@@ -203,30 +203,41 @@
         </div>
 
         <div class="swiper myBookSwiper position-relative px-2">
-            <div class="swiper-wrapper">
-                
+
+            <div class="swiper-wrapper">         
                 <div class="swiper-slide">
-                    <div class="card border-0 product-card h-100">
-                        <div class="image-wrapper position-relative overflow-hidden mb-2">
+                    <div class="card border-0 product-card h-100" 
+                        data-img="./img/programming/prg_1.png"
+                        data-title="Tự học C Sharp"
+                        data-author="Phạm Quang Hiển"
+                        data-price="155.000 ₫"
+                        data-desc="Mô tả sách C# viết ở đây...">
+                        
+                        <div class="image-wrapper position-relative overflow-hidden mb-2" 
+                            style="cursor: pointer;"
+                            onclick="window.openBookDetailModal(this.closest('.card'))">
+                            
                             <span class="badge bg-danger position-absolute top-0 start-0 m-2 rounded-0 small" style="z-index: 5;">-20%</span>
                             
-                                <img src="./img/programming/prg_1.png" class="card-img-top rounded-0" alt="Book Cover">
-                            </a>
-
+                            <img src="./img/programming/prg_1.png" class="card-img-top rounded-0" alt="Book Cover">
                             <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
-                                onclick="addToCart(this)"
+                                onclick="event.stopPropagation(); addToCart(this)"
                                 data-id="bs1"
                                 data-title="Tự học C Sharp"
                                 data-price="155000"
-                                data-img="./img/programming/prg_1.png"
-                                data-author="Phạm Quang Hiển">
+                                data-img="./img/programming/prg_1.png">
                                 <i class="bi bi-cart-plus me-1"></i> Thêm
                             </button>
                         </div>
-                        <div class="card-body px-0 pt-0">
+
+                        <div class="card-body px-0 pt-0"
+                            style="cursor: pointer;"
+                            onclick="window.openBookDetailModal(this.closest('.card'))">
+                            
                             <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
-                                <a class="text-decoration-none text-dark stretched-link-custom">Tự học C Sharp</a>
+                                <a class="text-decoration-none text-dark">Tự học C Sharp</a>
                             </h6>
+                            
                             <p class="text-muted small mb-1" style="font-size: 0.8rem;">Phạm Quang Hiển</p>
                             <div class="d-flex gap-2 align-items-center small">
                                 <span class="fw-bold">155.000 ₫</span>
@@ -237,92 +248,148 @@
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="card border-0 product-card h-100">
-                        <div class="image-wrapper position-relative overflow-hidden mb-2">
-                                <img src="./img/self-help/self_help_4.png" class="card-img-top rounded-0" alt="Book Cover">
-                            </a>
+                    <div class="card border-0 product-card h-100" 
+                        data-id="bs2"
+                        data-img="./img/self-help/self_help_4.png"
+                        data-title="Dám Nói &quot;Không&quot;"
+                        data-author="Nguyễn Anh Dũng"
+                        data-price="79.000 ₫"
+                        data-price-num="79000"
+                        data-desc="Cuốn sách giúp bạn rèn luyện tư duy, biết cách từ chối khéo léo để sống hạnh phúc hơn...">
+                        
+                        <div class="image-wrapper position-relative overflow-hidden mb-2" 
+                            style="cursor: pointer;"
+                            onclick="window.openBookDetailModal(this.closest('.card'))">
+                            
+                            <img src="./img/self-help/self_help_4.png" class="card-img-top rounded-0" alt="Book Cover">
                             
                             <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
-                                onclick="addToCart(this)"
+                                onclick="event.stopPropagation(); addToCart(this)"
                                 data-id="bs2"
                                 data-title="Dám Nói &quot;Không&quot;"
                                 data-price="79000"
-                                data-img="./img/self-help/self_help_4.png"
-                                data-author="Mynte Studio">
+                                data-img="./img/self-help/self_help_4.png">
                                 <i class="bi bi-cart-plus me-1"></i> Thêm
                             </button>
                         </div>
-                        <div class="card-body px-0 pt-0">
+
+                        <div class="card-body px-0 pt-0"
+                            style="cursor: pointer;"
+                            onclick="window.openBookDetailModal(this.closest('.card'))">
+                            
                             <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
                                 <a class="text-decoration-none text-dark">Dám Nói "Không"</a>
                             </h6>
+                            
                             <p class="text-muted small mb-1" style="font-size: 0.8rem;">Nguyễn Anh Dũng</p>
-                            <p class="fw-bold small">79.000 ₫</p>
+                            
+                            <div class="d-flex gap-2 align-items-center small">
+                                <span class="fw-bold">79.000 ₫</span>
+                                </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="card border-0 product-card h-100">
-                        <div class="image-wrapper position-relative overflow-hidden mb-2">
+                        <div class="card border-0 product-card h-100" 
+                            data-id="bs3"
+                            data-title="Skills for Success"
+                            data-author="Stella Cottrell"
+                            data-price="39.000 ₫" 
+                            data-price-num="39000"
+                            data-img="./img/self-help/self_help_5.png"
+                            data-desc="Cuốn sách hướng dẫn phát triển kỹ năng học tập, làm việc nhóm và tư duy phản biện để đạt được thành công bền vững...">
+
+                            <div class="image-wrapper position-relative overflow-hidden mb-2"
+                                style="cursor: pointer;"
+                                onclick="window.openBookDetailModal(this.closest('.card'))">
+                                
                                 <img src="./img/self-help/self_help_5.png" class="card-img-top rounded-0" alt="Book Cover">
-                            </a>
-                            
-                            <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
-                                onclick="addToCart(this)"
-                                data-id="bs3"
-                                data-title="Skills for Success"
-                                data-price="39000"
-                                data-img="./img/self-help/self_help_5.png"
-                                data-author="Stella Cottrell">
-                                <i class="bi bi-cart-plus me-1"></i> Thêm
-                            </button>
-                        </div>
-                        <div class="card-body px-0 pt-0">
-                            <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
-                                <a class="text-decoration-none text-dark">Skills for Success</a>
-                            </h6>
-                            <p class="text-muted small mb-1" style="font-size: 0.8rem;">Stella Cottrell</p>
-                            <p class="fw-bold small">39.000 ₫</p>
+                                
+                                <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
+                                    onclick="event.stopPropagation(); addToCart(this)" 
+                                    data-id="bs3"
+                                    data-title="Skills for Success"
+                                    data-price="39000"
+                                    data-img="./img/self-help/self_help_5.png"
+                                    data-author="Stella Cottrell">
+                                    <i class="bi bi-cart-plus me-1"></i> Thêm
+                                </button>
+                            </div>
+
+                            <div class="card-body px-0 pt-0"
+                                style="cursor: pointer;"
+                                onclick="window.openBookDetailModal(this.closest('.card'))">
+                                
+                                <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
+                                    <a class="text-decoration-none text-dark">Skills for Success</a>
+                                </h6>
+                                <p class="text-muted small mb-1" style="font-size: 0.8rem;">Stella Cottrell</p>
+                                <p class="fw-bold small">39.000 ₫</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                 <div class="swiper-slide">
-                    <div class="card border-0 product-card h-100">
-                        <div class="image-wrapper position-relative overflow-hidden mb-2">
-                             <span class="badge bg-black position-absolute top-0 start-0 m-2 rounded-0 small" style="z-index: 5;">New</span>
+                        <div class="card border-0 product-card h-100" 
+                            data-id="bs4"
+                            data-title="AI Engineering: Building Applications with Foundation Models"
+                            data-author="Chip Huyen"
+                            data-price="200.000 ₫" 
+                            data-price-num="200000"
+                            data-img="./img/programming/prg_8.png"
+                            data-desc="Cuốn sách toàn diện về kỹ thuật AI, hướng dẫn cách xây dựng và tối ưu hóa các ứng dụng dựa trên Foundation Models...">
+
+                            <div class="image-wrapper position-relative overflow-hidden mb-2"
+                                style="cursor: pointer;"
+                                onclick="window.openBookDetailModal(this.closest('.card'))">
+                                
+                                <span class="badge bg-black position-absolute top-0 start-0 m-2 rounded-0 small" style="z-index: 5;">New</span>
+                                
                                 <img src="./img/programming/prg_8.png" class="card-img-top rounded-0" alt="Book Cover">
-                            </a>
-                            
-                            <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
-                                onclick="addToCart(this)"
-                                data-id="bs4"
-                                data-title="AI Engineering: Building Applications with Foundation Models"
-                                data-price="200000"
-                                data-img="./img/programming/prg_8.png"
-                                data-author="Chip Huyen">
-                                <i class="bi bi-cart-plus me-1"></i> Thêm
-                            </button>
-                        </div>
-                        <div class="card-body px-0 pt-0">
-                            <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
-                                <a class="text-decoration-none text-dark">AI Engineering: Building Applications with Foundation Models</a>
-                            </h6>
-                            <p class="text-muted small mb-1" style="font-size: 0.8rem;">Chip Huyen</p>
-                            <p class="fw-bold small">200.000 ₫</p>
+                                
+                                <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
+                                    onclick="event.stopPropagation(); addToCart(this)" 
+                                    data-id="bs4"
+                                    data-title="AI Engineering: Building Applications with Foundation Models"
+                                    data-price="200000"
+                                    data-img="./img/programming/prg_8.png"
+                                    data-author="Chip Huyen">
+                                    <i class="bi bi-cart-plus me-1"></i> Thêm
+                                </button>
+                            </div>
+
+                            <div class="card-body px-0 pt-0"
+                                style="cursor: pointer;"
+                                onclick="window.openBookDetailModal(this.closest('.card'))">
+                                
+                                <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
+                                    <a class="text-decoration-none text-dark">AI Engineering: Building Applications with Foundation Models</a>
+                                </h6>
+                                <p class="text-muted small mb-1" style="font-size: 0.8rem;">Chip Huyen</p>
+                                <p class="fw-bold small">200.000 ₫</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                 <div class="swiper-slide">
-                    <div class="card border-0 product-card h-100">
-                        <div class="image-wrapper position-relative overflow-hidden mb-2">
-                                <img src="./img/self-help/self_help_1.png" class="card-img-top rounded-0" alt="Book Cover">
-                            </a>
+                    <div class="card border-0 product-card h-100" 
+                        data-id="bs5"
+                        data-title="Lời Nói Dối Vĩ Đại Của Não"
+                        data-author="Kelly McGonigal"
+                        data-price="59.000 ₫" 
+                        data-price-num="59000"
+                        data-img="./img/self-help/self_help_1.png"
+                        data-desc="Cuốn sách tâm lý học nổi tiếng giải mã cách bộ não đánh lừa chúng ta về ý chí và sự tự chủ...">
+
+                        <div class="image-wrapper position-relative overflow-hidden mb-2"
+                            style="cursor: pointer;"
+                            onclick="window.openBookDetailModal(this.closest('.card'))">
+                            
+                            <img src="./img/self-help/self_help_1.png" class="card-img-top rounded-0" alt="Book Cover">
                             
                             <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
-                                onclick="addToCart(this)"
+                                onclick="event.stopPropagation(); addToCart(this)" 
                                 data-id="bs5"
                                 data-title="Lời Nói Dối Vĩ Đại Của Não"
                                 data-price="59000"
@@ -331,7 +398,11 @@
                                 <i class="bi bi-cart-plus me-1"></i> Thêm
                             </button>
                         </div>
-                        <div class="card-body px-0 pt-0">
+
+                        <div class="card-body px-0 pt-0"
+                            style="cursor: pointer;"
+                            onclick="window.openBookDetailModal(this.closest('.card'))">
+                            
                             <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
                                 <a class="text-decoration-none text-dark">Lời Nói Dối Vĩ Đại Của Não</a>
                             </h6>
@@ -342,13 +413,23 @@
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="card border-0 product-card h-100">
-                        <div class="image-wrapper position-relative overflow-hidden mb-2">
-                                <img src="./img/programming/prg_3.png" class="card-img-top rounded-0" alt="Book Cover">
-                            </a>
+                    <div class="card border-0 product-card h-100" 
+                        data-id="bs6"
+                        data-title="Programming For Newbies C/C++"
+                        data-author="Đỗ Thị Hồng Ngát"
+                        data-price="98.000 ₫" 
+                        data-price-num="98000"
+                        data-img="./img/programming/prg_3.png"
+                        data-desc="Sách hướng dẫn nhập môn lập trình C/C++ dành cho người mới bắt đầu, trình bày dễ hiểu và kèm nhiều bài tập thực hành...">
+
+                        <div class="image-wrapper position-relative overflow-hidden mb-2"
+                            style="cursor: pointer;"
+                            onclick="window.openBookDetailModal(this.closest('.card'))">
+                            
+                            <img src="./img/programming/prg_3.png" class="card-img-top rounded-0" alt="Book Cover">
                             
                             <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
-                                onclick="addToCart(this)"
+                                onclick="event.stopPropagation(); addToCart(this)" 
                                 data-id="bs6"
                                 data-title="Programming For Newbies C/C++"
                                 data-price="98000"
@@ -357,19 +438,22 @@
                                 <i class="bi bi-cart-plus me-1"></i> Thêm
                             </button>
                         </div>
-                        <div class="card-body px-0 pt-0">
+
+                        <div class="card-body px-0 pt-0"
+                            style="cursor: pointer;"
+                            onclick="window.openBookDetailModal(this.closest('.card'))">
+                            
                             <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
                                 <a class="text-decoration-none text-dark">Programming For Newbies C/C++</a>
                             </h6>
                             <p class="text-muted small mb-1" style="font-size: 0.8rem;">Đỗ Thị Hồng Ngát</p>
+                            
                             <div class="d-flex gap-2 align-items-center small">
                                 <span class="fw-bold">98.000 ₫</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
             
             <div class="swiper-button-next custom-nav-btn"></div>
             <div class="swiper-button-prev custom-nav-btn"></div>
@@ -429,7 +513,7 @@
                 <div class="row g-4">
                     
                    <div class="col-md-4 col-sm-6">
-                        <h6 class="text-uppercase fw-bold mb-3 small letter-spacing">Contact Us</h6>
+                        <h6 class="text-uppercase fw-bold mb-3 small letter-spacing">Contact</h6>
                         <ul class="list-unstyled d-flex flex-column gap-2">
                             <li>
                                 <a href="#" class="footer-link text-decoration-none text-muted small">
@@ -559,6 +643,46 @@
                         </form>
                     </div>
 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="bookDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg"> 
+        <div class="modal-content border-0 shadow">
+            
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body pb-5">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="book-frame rounded overflow-hidden mb-3">
+                            <img id="modalBookImg" src="" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-7">
+                        <h3 id="modalBookTitle" class="fw-bold brand-font">Tên Sách</h3>
+                        
+                        <p class="text-muted" id="modalBookAuthor">Tác giả</p>
+                        
+                        <h4 class="text-danger fw-bold my-3" id="modalBookPrice">0 ₫</h4>
+                        
+                        <p class="text-secondary small" id="modalBookDesc">
+                            Mô tả tóm tắt của sách sẽ hiển thị ở đây...
+                        </p>
+
+                        <hr>
+                        
+                        <div class="d-flex mt-4">
+                            <button id="modalBookBtn" class="btn btn-dark w-100 py-2 rounded-0 mt-auto" onclick="addToCart(this)">
+                                <i class="bi bi-cart-plus me-2"></i> THÊM VÀO GIỎ
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
