@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - DREAMY</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-white">
+
+<header class="fixed-top bg-white border-bottom border-light">
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="index.html" style="letter-spacing: 1px;">
+                <span class="brand-font fw-bold">DREAMY</span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="bi bi-list fs-2"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center text-uppercase small spacing-wide gap-3 nav-interaction-group">
+
+                    <li class="nav-item">
+                       <a class="nav-link nav-interactive-item" href="book.html">Sách mới</a>
+                    </li>
+
+                    <li class="nav-item">
+                       <a class="nav-link nav-interactive-item" href="log.html">Lịch Sử</a>
+                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-interactive-item" href="about.html">Về chúng tôi</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link position-relative nav-interactive-item" href="cart.html">
+                            <i class="bi bi-bag fs-5"></i>
+                            <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-black" style="font-size: 0.6rem;">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3 position-relative" id="userAccountArea">
+                        
+                        <a href="#" class="nav-link nav-interactive-item" data-bs-toggle="modal" data-bs-target="#authModal" id="loginBtn">
+                            <i class="bi bi-person fs-5"></i>
+                        </a>
+
+                        <div class="d-none dropdown" id="loggedInMenu">
+                            <a href="#" class="d-flex align-items-center text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="bg-black text-white rounded-circle d-flex align-items-center justify-content-center fw-bold shadow-sm" 
+                                     style="width: 32px; height: 32px; font-size: 14px; transition: transform 0.2s;" 
+                                     id="userAvatar"
+                                     onmouseover="this.style.transform='scale(1.1)'" 
+                                     onmouseout="this.style.transform='scale(1)'">
+                                    U
+                                </div>
+                            </a>
+                            
+                            <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg mt-3 p-2 rounded-3 animate-up" style="min-width: 200px;">
+                                <li>
+                                    <h6 class="dropdown-header text-uppercase small letter-spacing" id="userNameDisplay">Xin chào User</h6>
+                                </li>
+                                
+                                <li>
+                                    <a class="dropdown-item rounded-2 py-2 small" href="orders.html">
+                                        <i class="bi bi-receipt me-2"></i>Đơn hàng của tôi
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item rounded-2 py-2 small text-danger" href="#" onclick="handleLogout()">
+                                        <i class="bi bi-box-arrow-right me-2"></i>Đăng xuất
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <section class="py-5 mt-5">
+    <div class="container py-5">
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <h1 class="brand-font display-6">Giỏ hàng của bạn</h1>
+                <p id="cart-count-info" class="text-muted fw-light">Đang tải thông tin giỏ hàng...</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 pe-lg-5" id="cart-items-container">
+                </div>
+
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <div class="bg-light p-4 rounded-0">
+                    <h4 class="brand-font mb-4">Cộng giỏ hàng</h4>
+                    
+                    <div class="d-flex justify-content-between mb-3 text-muted small">
+                        <span>Tạm tính</span>
+                        <span id="cart-subtotal">0 ₫</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3 text-muted small">
+                        <span>Phí vận chuyển</span>
+                        <span>Miễn phí</span>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="d-flex justify-content-between mb-4 fs-5 fw-bold text-dark">
+                        <span>Tổng cộng</span>
+                        <span id="cart-total">0 ₫</span>
+                    </div>
+                        <button class="btn btn-dark w-100 rounded-0 py-3 text-uppercase small spacing-wide mb-3" 
+                                onclick="processCheckout()">
+                            Tiến hành thanh toán
+                        </button>
+                    
+                    <p class="text-muted small text-center mb-0 fst-italic">
+                        <i class="bi bi-shield-check me-1"></i> Bảo mật thanh toán 100%
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+   <footer class="bg-white border-top pt-5 pb-4 mt-5">
+    <div class="container">
+        <div class="row g-4 justify-content-between">
+            
+            <div class="col-lg-4 col-md-12 text-center text-lg-start">
+                <a class="navbar-brand fs-2 mb-3 d-block" href="#" style="letter-spacing: 1px;">
+                    <span class="brand-font fw-bold">DREAMY</span>
+                </a>
+                <p class="text-muted small mb-1">
+                    &copy; 2025 DREAMY BOOKS.
+                </p>
+                <p class="text-muted small">
+                    Designed by <span class="fw-bold text-dark">Group 15</span>.
+                </p>
+            </div>
+
+            <div class="col-lg-7 col-md-12">
+                <div class="row g-4">
+                    
+                   <div class="col-md-4 col-sm-6">
+                        <h6 class="text-uppercase fw-bold mb-3 small letter-spacing">Contact</h6>
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    <i class="bi bi-messenger me-2"></i> Messenger
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:contact@dreamybooks.com" class="footer-link text-decoration-none text-muted small">
+                                    <i class="bi bi-envelope me-2"></i> Email
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <h6 class="text-uppercase fw-bold mb-3 small letter-spacing">Social Media</h6>
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    <i class="bi bi-facebook me-2"></i> Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    <i class="bi bi-instagram me-2"></i> Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    <i class="bi bi-twitter-x me-2"></i> X
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <h6 class="text-uppercase fw-bold mb-3 small letter-spacing">Claims</h6>
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    Legal Disclaimer
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    Terms of Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+        <script src="./js/cart.js"></script>
+        <script src="./js/common.js"></script>
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 shadow-lg overflow-hidden">
+            
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body px-5 pb-5 pt-0">
+                <div class="text-center mb-4">
+                    <h3 class="brand-font fw-bold mb-1">BookStore</h3>
+                    <p class="text-muted small">Chào mừng bạn quay trở lại.</p>
+                </div>
+
+                <ul class="nav nav-pills nav-fill mb-4 bg-light rounded-pill p-1" id="authTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active rounded-pill small fw-bold" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-panel" type="button">Đăng nhập</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-pill small fw-bold" id="register-tab" data-bs-toggle="tab" data-bs-target="#register-panel" type="button">Đăng ký</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="authTabContent">
+                    
+                    <div class="tab-pane fade show active" id="login-panel" role="tabpanel">
+                        <form id="loginForm" onsubmit="handleLogin(event)">
+                            <div class="mb-3">
+                                <input type="email" class="form-control rounded-3 py-2 bg-light border-0" id="loginEmail" placeholder="Email của bạn" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control rounded-3 py-2 bg-light border-0" id="loginPass" placeholder="Mật khẩu" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-dark rounded-pill py-2 fw-bold">Đăng nhập</button>
+                            </div>
+                            <div id="loginError" class="text-danger small text-center mt-2 d-none">Sai email hoặc mật khẩu!</div>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="register-panel" role="tabpanel">
+                        <form id="registerForm" onsubmit="handleRegister(event)">
+                            <div class="mb-3">
+                                <input type="text" class="form-control rounded-3 py-2 bg-light border-0" id="regName" placeholder="Tên hiển thị" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control rounded-3 py-2 bg-light border-0" id="regEmail" placeholder="Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control rounded-3 py-2 bg-light border-0" id="regPass" placeholder="Mật khẩu" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-dark rounded-pill py-2 fw-bold">Tạo tài khoản</button>
+                            </div>
+                            <div id="regSuccess" class="text-success small text-center mt-2 d-none">Đăng ký thành công! Hãy đăng nhập.</div>
+                            <div id="regError" class="text-danger small text-center mt-2 d-none">Email này đã tồn tại!</div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg"> <div class="modal-content rounded-0 border-0 shadow-lg">
+            
+            <div class="modal-header bg-black text-white rounded-0 border-0">
+                <h5 class="modal-title brand-font text-uppercase spacing-wide fs-6">
+                    <i class="bi bi-credit-card me-2"></i>Thông tin thanh toán
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body p-4 bg-light">
+                <div class="row g-4">
+                    
+                    <div class="col-md-7">
+                        <h6 class="fw-bold mb-3">1. Địa chỉ nhận hàng</h6>
+                        <form id="checkoutForm">
+                            <div class="mb-3">
+                                <label class="small text-muted mb-1">Họ và tên</label>
+                                <input type="text" class="form-control rounded-0" id="inputName" required placeholder="Nhập tên người nhận">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small text-muted mb-1">Số điện thoại</label>
+                                <input type="tel" class="form-control rounded-0" id="inputPhone" required placeholder="Ví dụ: 0912...">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small text-muted mb-1">Địa chỉ chi tiết</label>
+                                <textarea class="form-control rounded-0" id="inputAddress" rows="2" required placeholder="Số nhà, đường, phường/xã..."></textarea>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md-5">
+                        <h6 class="fw-bold mb-3">2. Phương thức thanh toán</h6>
+                        <div class="d-flex flex-column gap-2 mb-4">
+                            <div class="form-check border p-3 bg-white">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="methodCOD" value="COD" checked>
+                                <label class="form-check-label w-100 cursor-pointer" for="methodCOD">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span>Thanh toán khi nhận hàng (COD)</span>
+                                        <i class="bi bi-cash fs-5 text-success"></i>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-check border p-3 bg-white">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="methodBank" value="Banking">
+                                <label class="form-check-label w-100 cursor-pointer" for="methodBank">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span>Chuyển khoản ngân hàng</span>
+                                        <i class="bi bi-bank fs-5 text-primary"></i>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-3 border">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted small">Tạm tính:</span>
+                                <span class="fw-bold" id="checkoutModalTotal">0đ</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted small">Phí vận chuyển:</span>
+                                <span class="text-success small">Miễn phí</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-uppercase small">Tổng cộng:</span>
+                                <span class="fs-5 fw-bold text-danger" id="checkoutModalFinalTotal">0đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer border-0 bg-white">
+                <button type="button" class="btn btn-outline-secondary rounded-0 px-4" data-bs-dismiss="modal">
+                    Quay lại
+                </button>
+                <button type="button" class="btn btn-black text-white rounded-0 px-4" onclick="handleConfirmPayment()">
+                    Xác nhận đặt hàng
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-loader"></div>
+</body>
+</html>

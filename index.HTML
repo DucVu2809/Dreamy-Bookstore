@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Books | Minimalist Store</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="fixed-top bg-white border-bottom border-light">
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="index.html" style="letter-spacing: 1px;">
+                <span class="brand-font fw-bold">DREAMY</span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="bi bi-list fs-2"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center text-uppercase small spacing-wide gap-3 nav-interaction-group">
+
+                    <li class="nav-item">
+                       <a class="nav-link nav-interactive-item" href="book.html">Sách mới</a>
+                    </li>
+
+                    <li class="nav-item">
+                       <a class="nav-link nav-interactive-item" href="log.html">Lịch Sử</a>
+                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-interactive-item" href="about.html">Về chúng tôi</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link position-relative nav-interactive-item" href="cart.html">
+                            <i class="bi bi-bag fs-5"></i>
+                            <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-black" style="font-size: 0.6rem;">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3 position-relative" id="userAccountArea">
+                        
+                        <a href="#" class="nav-link nav-interactive-item" data-bs-toggle="modal" data-bs-target="#authModal" id="loginBtn">
+                            <i class="bi bi-person fs-5"></i>
+                        </a>
+
+                        <div class="d-none dropdown" id="loggedInMenu">
+                            <a href="#" class="d-flex align-items-center text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="bg-black text-white rounded-circle d-flex align-items-center justify-content-center fw-bold shadow-sm" 
+                                     style="width: 32px; height: 32px; font-size: 14px; transition: transform 0.2s;" 
+                                     id="userAvatar"
+                                     onmouseover="this.style.transform='scale(1.1)'" 
+                                     onmouseout="this.style.transform='scale(1)'">
+                                    U
+                                </div>
+                            </a>
+                            
+                            <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg mt-3 p-2 rounded-3 animate-up" style="min-width: 200px;">
+                                <li>
+                                    <h6 class="dropdown-header text-uppercase small letter-spacing" id="userNameDisplay">Xin chào User</h6>
+                                </li>
+                                
+                                <li>
+                                    <a class="dropdown-item rounded-2 py-2 small" href="orders.html">
+                                        <i class="bi bi-receipt me-2"></i>Đơn hàng của tôi
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item rounded-2 py-2 small text-danger" href="#" onclick="handleLogout()">
+                                        <i class="bi bi-box-arrow-right me-2"></i>Đăng xuất
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container mt-5 pt-5">
+    
+<div class="container-fluid p-0 mt-5 mb-5 horizontal-fade-banner animate-down">
+    <div class="container py-5 text-center">
+        <div class="col-lg-8 mx-auto">
+            <p class="text-uppercase text-muted small letter-spacing mb-3">Thư viện chọn lọc</p>
+            <h1 class="display-4 brand-font fst-italic mb-4 text-dark">
+                "Đọc để thấy thế giới <br> rộng lớn hơn."
+            </h1>
+            <a href="#shop" class="btn btn-outline-dark rounded-0 px-4 py-2 text-uppercase small" onclick="lenis.scrollTo('#shop')">
+                Xem bộ sưu tập
+            </a>
+        </div>
+    </div>
+</div>
+
+    <section class="partner-strip-section">
+        <div class="container text-center mb-3">
+           <p class="text-uppercase text-muted letter-spacing" style="font-size: 0.7rem;">Trusted by 10+ Counterparties</p>
+        </div>
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <div class="logo-set">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt="Amazon" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" alt="Netflix" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png" alt="IBM" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1600px-Apple_logo_black.svg.png" alt="Apple" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png" alt="Microsoft" class="partner-logo">
+                </div>
+                <div class="logo-set">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt="Amazon" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" alt="Netflix" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png" alt="IBM" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1600px-Apple_logo_black.svg.png" alt="Apple" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png" alt="Microsoft" class="partner-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="py-5 bg-light-subtle mt-4">
+        <div class="container">
+            <div class="row mb-5 text-center">
+                <div class="col-12">
+                    <span class="badge bg-black text-uppercase letter-spacing px-3 py-2 mb-3">Editor's Choice 2025</span>
+                    <h2 class="display-4 brand-font">Sách Của Năm</h2>
+                    <div style="width: 50px; height: 1px; background: #000; margin: 20px auto;"></div>
+                </div>
+            </div>
+
+            <div class="row align-items-center g-5">
+                
+                <div class="col-lg-6 text-center">
+                    <div class="book-showcase position-relative d-inline-block">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/1/13/Milk_and_Honey_%28poetry_collection%29.jpg" 
+                             alt="Book of the Year" 
+                             class="img-fluid rounded-1 shadow-lg book-cover-3d" 
+                             style="max-width: 350px;"> <div class="decorative-circle"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="ps-lg-4">
+                        <h3 class="display-5 brand-font mb-2">Milk and Honey</h3>
+                        <p class="text-uppercase text-muted small letter-spacing mb-4">By rupi kaur</p>
+                        
+                        <div class="mb-4 text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="text-muted text-black ms-2 small">(4.9/5 từ độc giả)</span>
+                        </div>
+
+                        <figure class="bg-white p-4 border-start border-4 border-dark mb-4 fst-italic text-muted shadow-sm">
+                            "Một kiệt tác về nghệ thuật thơ trừu tượng. Cuốn sách này không chỉ dạy bạn cách buông bỏ, mà còn là cách tìm lại chính mình giữa thế giới ồn ào."
+                        </figure>
+
+                        <p class="mb-4 text-secondary">
+                            Phiên bản đặc biệt bìa cứng, in màu chất lượng cao. Tặng kèm Bookmark thiết kế riêng cho 100 đơn hàng đầu tiên.
+                        </p>
+
+                        <div class="d-flex align-items-center gap-4">
+                            <h2 class="fw-bold m-0">95.000 ₫</h2>
+                            
+                            <button class="btn btn-dark rounded-0 px-5 py-3 text-uppercase letter-spacing transition-btn"
+                                onclick="addToCart(this)"
+                                data-id="99" 
+                                data-title="Milk and Honey" 
+                                data-price="95000" 
+                                data-img="https://upload.wikimedia.org/wikipedia/en/1/13/Milk_and_Honey_%28poetry_collection%29.jpg" 
+                                data-author="rupi kaur">
+                                Thêm vào giỏ <i class="bi bi-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<section class="py-5 mb-5 position-relative group-hover-trigger">
+    <div class="container">
+        
+        <div class="d-flex justify-content-between align-items-end mb-4">
+            <h3 class="brand-font fs-3 m-0">Sách Bán Chạy</h3>
+            <a href="book.html" class="text-decoration-none text-dark small text-uppercase fw-bold border-bottom border-dark pb-1">Xem tất cả</a>
+        </div>
+
+        <div class="swiper myBookSwiper position-relative px-2">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <div class="card border-0 product-card h-100">
+                        <div class="image-wrapper position-relative overflow-hidden mb-2">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2 rounded-0 small" style="z-index: 5;">-20%</span>
+                            
+                                <img src="./img/programming/prg_1.png" class="card-img-top rounded-0" alt="Book Cover">
+                            </a>
+
+                            <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
+                                onclick="addToCart(this)"
+                                data-id="bs1"
+                                data-title="Tự học C Sharp"
+                                data-price="155000"
+                                data-img="./img/programming/prg_1.png"
+                                data-author="Phạm Quang Hiển">
+                                <i class="bi bi-cart-plus me-1"></i> Thêm
+                            </button>
+                        </div>
+                        <div class="card-body px-0 pt-0">
+                            <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
+                                <a class="text-decoration-none text-dark stretched-link-custom">Tự học C Sharp</a>
+                            </h6>
+                            <p class="text-muted small mb-1" style="font-size: 0.8rem;">Phạm Quang Hiển</p>
+                            <div class="d-flex gap-2 align-items-center small">
+                                <span class="fw-bold">155.000 ₫</span>
+                                <span class="text-decoration-line-through text-muted">180.000 ₫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card border-0 product-card h-100">
+                        <div class="image-wrapper position-relative overflow-hidden mb-2">
+                                <img src="./img/self-help/self_help_4.png" class="card-img-top rounded-0" alt="Book Cover">
+                            </a>
+                            
+                            <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
+                                onclick="addToCart(this)"
+                                data-id="bs2"
+                                data-title="Dám Nói &quot;Không&quot;"
+                                data-price="79000"
+                                data-img="./img/self-help/self_help_4.png"
+                                data-author="Mynte Studio">
+                                <i class="bi bi-cart-plus me-1"></i> Thêm
+                            </button>
+                        </div>
+                        <div class="card-body px-0 pt-0">
+                            <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
+                                <a class="text-decoration-none text-dark">Dám Nói "Không"</a>
+                            </h6>
+                            <p class="text-muted small mb-1" style="font-size: 0.8rem;">Nguyễn Anh Dũng</p>
+                            <p class="fw-bold small">79.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card border-0 product-card h-100">
+                        <div class="image-wrapper position-relative overflow-hidden mb-2">
+                                <img src="./img/self-help/self_help_5.png" class="card-img-top rounded-0" alt="Book Cover">
+                            </a>
+                            
+                            <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
+                                onclick="addToCart(this)"
+                                data-id="bs3"
+                                data-title="Skills for Success"
+                                data-price="39000"
+                                data-img="./img/self-help/self_help_5.png"
+                                data-author="Stella Cottrell">
+                                <i class="bi bi-cart-plus me-1"></i> Thêm
+                            </button>
+                        </div>
+                        <div class="card-body px-0 pt-0">
+                            <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
+                                <a class="text-decoration-none text-dark">Skills for Success</a>
+                            </h6>
+                            <p class="text-muted small mb-1" style="font-size: 0.8rem;">Stella Cottrell</p>
+                            <p class="fw-bold small">39.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card border-0 product-card h-100">
+                        <div class="image-wrapper position-relative overflow-hidden mb-2">
+                             <span class="badge bg-black position-absolute top-0 start-0 m-2 rounded-0 small" style="z-index: 5;">New</span>
+                                <img src="./img/programming/prg_8.png" class="card-img-top rounded-0" alt="Book Cover">
+                            </a>
+                            
+                            <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
+                                onclick="addToCart(this)"
+                                data-id="bs4"
+                                data-title="AI Engineering: Building Applications with Foundation Models"
+                                data-price="200000"
+                                data-img="./img/programming/prg_8.png"
+                                data-author="Chip Huyen">
+                                <i class="bi bi-cart-plus me-1"></i> Thêm
+                            </button>
+                        </div>
+                        <div class="card-body px-0 pt-0">
+                            <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
+                                <a class="text-decoration-none text-dark">AI Engineering: Building Applications with Foundation Models</a>
+                            </h6>
+                            <p class="text-muted small mb-1" style="font-size: 0.8rem;">Chip Huyen</p>
+                            <p class="fw-bold small">200.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card border-0 product-card h-100">
+                        <div class="image-wrapper position-relative overflow-hidden mb-2">
+                                <img src="./img/self-help/self_help_1.png" class="card-img-top rounded-0" alt="Book Cover">
+                            </a>
+                            
+                            <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
+                                onclick="addToCart(this)"
+                                data-id="bs5"
+                                data-title="Lời Nói Dối Vĩ Đại Của Não"
+                                data-price="59000"
+                                data-img="./img/self-help/self_help_1.png"
+                                data-author="Kelly McGonigal">
+                                <i class="bi bi-cart-plus me-1"></i> Thêm
+                            </button>
+                        </div>
+                        <div class="card-body px-0 pt-0">
+                            <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
+                                <a class="text-decoration-none text-dark">Lời Nói Dối Vĩ Đại Của Não</a>
+                            </h6>
+                            <p class="text-muted small mb-1" style="font-size: 0.8rem;">Kelly McGonigal</p>
+                            <p class="fw-bold small">59.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card border-0 product-card h-100">
+                        <div class="image-wrapper position-relative overflow-hidden mb-2">
+                                <img src="./img/programming/prg_3.png" class="card-img-top rounded-0" alt="Book Cover">
+                            </a>
+                            
+                            <button class="btn btn-light btn-sm rounded-0 position-absolute start-0 end-0 bottom-0 m-2 quick-add-btn shadow-sm" style="z-index: 5;"
+                                onclick="addToCart(this)"
+                                data-id="bs6"
+                                data-title="Programming For Newbies C/C++"
+                                data-price="98000"
+                                data-img="./img/programming/prg_3.png"
+                                data-author="Đỗ Thị Hồng Ngát">
+                                <i class="bi bi-cart-plus me-1"></i> Thêm
+                            </button>
+                        </div>
+                        <div class="card-body px-0 pt-0">
+                            <h6 class="card-title brand-font fs-6 mb-1 text-truncate">
+                                <a class="text-decoration-none text-dark">Programming For Newbies C/C++</a>
+                            </h6>
+                            <p class="text-muted small mb-1" style="font-size: 0.8rem;">Đỗ Thị Hồng Ngát</p>
+                            <div class="d-flex gap-2 align-items-center small">
+                                <span class="fw-bold">98.000 ₫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="swiper-button-next custom-nav-btn"></div>
+            <div class="swiper-button-prev custom-nav-btn"></div>
+        </div>
+    </div>
+</section>
+<section class="py-5 my-5">
+    <div class="container py-lg-5">
+        
+        <div class="row mb-4">
+            <div class="col-12"> 
+                
+                <h2 class="brand-font fs-2 mb-4 reveal-item text-start text-dark fw-normal">
+                    Chọn người đồng hành <br> luôn ưu tiên bạn.
+                </h2>
+
+                <p class="fs-5 fw-light text-secondary mb-0 reveal-item text-start" style="line-height: 1.9;">
+                    Với trang thông tin được cá nhân hóa, bạn có thể theo dõi hành trình đọc sách, 
+                    nhận gợi ý phù hợp và quản lý mọi đơn hàng một cách dễ dàng. 
+                    Tận hưởng dịch vụ <span class="text-dark fw-medium">hỗ trợ 24/7</span>, 
+                    hệ thống tích điểm minh bạch, giao hàng nhanh chóng và hoàn toàn không có phí ẩn.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 text-end"> 
+                <div class="reveal-item">
+                    <p class="brand-font fst-italic fs-3 mb-0 text-dark">
+                        "Chỉ là sự an tâm cho chuyến đồng hành."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+</main>
+
+   <footer class="bg-white border-top pt-5 pb-4 mt-5">
+    <div class="container">
+        <div class="row g-4 justify-content-between">
+            
+            <div class="col-lg-4 col-md-12 text-center text-lg-start">
+                <a class="navbar-brand fs-2 mb-3 d-block" href="#" style="letter-spacing: 1px;">
+                    <span class="brand-font fw-bold">DREAMY</span>
+                </a>
+                <p class="text-muted small mb-1">
+                    &copy; 2025 DREAMY BOOKS.
+                </p>
+                <p class="text-muted small">
+                    Designed by <span class="fw-bold text-dark">Group 15</span>.
+                </p>
+            </div>
+
+            <div class="col-lg-7 col-md-12">
+                <div class="row g-4">
+                    
+                   <div class="col-md-4 col-sm-6">
+                        <h6 class="text-uppercase fw-bold mb-3 small letter-spacing">Contact</h6>
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    <i class="bi bi-messenger me-2"></i> Messenger
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:contact@dreamybooks.com" class="footer-link text-decoration-none text-muted small">
+                                    <i class="bi bi-envelope me-2"></i> Email
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <h6 class="text-uppercase fw-bold mb-3 small letter-spacing">Social Media</h6>
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    <i class="bi bi-facebook me-2"></i> Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    <i class="bi bi-instagram me-2"></i> Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    <i class="bi bi-twitter-x me-2"></i> X
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <h6 class="text-uppercase fw-bold mb-3 small letter-spacing">Claims</h6>
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    Legal Disclaimer
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    Terms of Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-decoration-none text-muted small">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+
+<div class="page-loader"></div>
+
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 shadow-lg overflow-hidden">
+            
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body px-5 pb-5 pt-0">
+                <div class="text-center mb-4">
+                    <h3 class="brand-font fw-bold mb-1">BookStore</h3>
+                    <p class="text-muted small">Chào mừng bạn quay trở lại.</p>
+                </div>
+
+                <ul class="nav nav-pills nav-fill mb-4 bg-light rounded-pill p-1" id="authTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active rounded-pill small fw-bold" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-panel" type="button">Đăng nhập</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-pill small fw-bold" id="register-tab" data-bs-toggle="tab" data-bs-target="#register-panel" type="button">Đăng ký</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="authTabContent">
+                    
+                    <div class="tab-pane fade show active" id="login-panel" role="tabpanel">
+                        <form id="loginForm" onsubmit="handleLogin(event)">
+                            <div class="mb-3">
+                                <input type="email" class="form-control rounded-3 py-2 bg-light border-0" id="loginEmail" placeholder="Email của bạn" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control rounded-3 py-2 bg-light border-0" id="loginPass" placeholder="Mật khẩu" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-dark rounded-pill py-2 fw-bold">Đăng nhập</button>
+                            </div>
+                            <div id="loginError" class="text-danger small text-center mt-2 d-none">Sai email hoặc mật khẩu!</div>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="register-panel" role="tabpanel">
+                        <form id="registerForm" onsubmit="handleRegister(event)">
+                            <div class="mb-3">
+                                <input type="text" class="form-control rounded-3 py-2 bg-light border-0" id="regName" placeholder="Tên hiển thị" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control rounded-3 py-2 bg-light border-0" id="regEmail" placeholder="Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control rounded-3 py-2 bg-light border-0" id="regPass" placeholder="Mật khẩu" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-dark rounded-pill py-2 fw-bold">Tạo tài khoản</button>
+                            </div>
+                            <div id="regSuccess" class="text-success small text-center mt-2 d-none">Đăng ký thành công! Hãy đăng nhập.</div>
+                            <div id="regError" class="text-danger small text-center mt-2 d-none">Email này đã tồn tại!</div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

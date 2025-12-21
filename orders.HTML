@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn hàng của tôi - Dreamy Bookstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <div class="container-fluid p-0 mt-5 mb-5 horizontal-fade-banner animate-down">
+        <div class="container py-4 text-center">
+            <h1 class="display-5 brand-font mb-2">Lịch sử đơn hàng</h1>
+            <p class="text-muted small text-uppercase letter-spacing">Theo dõi hành trình những cuốn sách của bạn</p>
+        </div>
+    </div>
+
+    <div class="container mb-5 animate-up">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                
+                <div class="table-responsive bg-white rounded-4 shadow-sm p-4 border">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light small text-uppercase text-muted">
+                            <tr>
+                                <th class="py-3 ps-3">Mã đơn</th>
+                                <th class="py-3">Ngày đặt</th>
+                                <th class="py-3">Sản phẩm</th>
+                                <th class="py-3">Tổng tiền</th>
+                                <th class="py-3">Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orderListArea">
+                            </tbody>
+                    </table>
+
+                    <div id="emptyOrderState" class="text-center py-5 d-none">
+                        <i class="bi bi-bag-x fs-1 text-muted opacity-25"></i>
+                        <p class="text-muted mt-3">Bạn chưa có đơn hàng nào.</p>
+                        <a href="index.html" class="btn btn-dark rounded-pill px-4 small">Mua sắm ngay</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        <div class="container pb-5 mb-5 text-center animate-up">
+        <div class="py-4">
+            <div class="mb-4 text-muted small letter-spacing text-uppercase">Bạn đã sẵn sàng để bắt đầu hành trình mới?</div>
+            
+            <a href="index.html" class="btn-explore-more">
+                <span class="text">Khám phá thêm</span>
+                <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            setTimeout(() => document.querySelector('.page-loader').classList.add('hidden'), 200);
+
+            renderOrders();
+        });
+
+        function renderOrders() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            const tbody = document.getElementById('orderListArea');
+            const emptyState = document.getElementById('emptyOrderState');
+
+            if (!currentUser) {
+                window.location.href = 'index.html'; 
+                return;
+            }
+
+            const allOrders = JSON.parse(localStorage.getItem('allOrders')) || [];
+            const myOrders = allOrders.filter(order => order.userEmail === currentUser.email);
+
+            if (myOrders.length === 0) {
+                tbody.parentElement.classList.add('d-none'); 
+                emptyState.classList.remove('d-none'); 
+                return;
+            }
+            let html = '';
+            myOrders.forEach(order => {
+                const itemNames = order.items.map(item => item.title).join(', ');
+                const displayNames = itemNames.length > 50 ? itemNames.substring(0, 50) + '...' : itemNames;
+
+                html += `
+                    <tr>
+                        <td class="ps-3 fw-bold text-primary">${order.id}</td>
+                        <td class="text-muted small">${order.date}</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="fw-medium text-dark">${displayNames}</span>
+                                <span class="text-muted small fst-italic">${order.items.length} cuốn sách</span>
+                            </div>
+                        </td>
+                        <td class="fw-bold">${order.total.toLocaleString('vi-VN')} đ</td>
+                        <td>
+                            <span class="badge bg-warning text-dark bg-opacity-25 border border-warning rounded-pill px-3">
+                                ${order.status}
+                            </span>
+                        </td>
+                    </tr>
+                `;
+            });
+            tbody.innerHTML = html;
+        }
+    </script>
+<div class="page-loader"></div>
+</body>
+</html>
